@@ -1,0 +1,72 @@
+{
+  "name": "crate-rackt-app",
+  "version": "0.1.0",
+  "description": "An opinionated, scalable create-react-app starting point configured with Airbnb linting, PostCSS modules, sanitize.css, and the Storybook UI development environment.",
+  "license": "MIT",
+  "author": "Michael Schwobe <mschwobe@gmail.com> (http://michaelschwobe.com)",
+  "repository": "michaelschwobe/crate-rackt-app",
+  "bugs": {
+    "url": "https://github.com/michaelschwobe/crate-rackt-app/issues"
+  },
+  "homepage": "https://github.com/michaelschwobe/crate-rackt-app#readme",
+  "keywords": [
+    "airbnb",
+    "babel",
+    "boilerplate",
+    "create-react-app",
+    "es6",
+    "eslint",
+    "front-end",
+    "minimal",
+    "modules",
+    "postcss",
+    "react",
+    "scalable",
+    "skeleton"
+  ],
+  "devDependencies": {
+    "custom-react-scripts": "0.0.20",
+    "eslint": "^3.9.1",
+    "eslint-config-airbnb": "latest",
+    "eslint-plugin-import": "^2.1.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.6.0"
+  },
+  "dependencies": {
+    "@kadira/storybook": "2.34.0",
+    "classnames": "^2.2.5",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-router": "next",
+    "sanitize.css": "^4.1.0"
+  },
+  "scripts": {
+    "lint": "eslint ./src",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9002",
+    "build-storybook": "build-storybook -o .storybook-build"
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "env": {
+      "browser": true
+    },
+    "rules": {
+      "class-methods-use-this": "off",
+      "import/extensions": "off",
+      "import/no-extraneous-dependencies": "off",
+      "max-len": "off",
+      "no-restricted-syntax": [
+        "error",
+        "ForInStatement",
+        "LabeledStatement",
+        "WithStatement"
+      ],
+      "react/jsx-filename-extension": "off",
+      "spaced-comment": "warn"
+    }
+  }
+}

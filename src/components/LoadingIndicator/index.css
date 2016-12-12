@@ -1,0 +1,44 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.root {
+  position: relative;
+  top: -.125em;
+  display: inline-block;
+  width: .875em;
+  height: .875em;
+  animation: spin 1s infinite linear;
+  vertical-align: middle;
+  border: .125em solid hsla(0, 0%, 0%, .1);
+  border-top-color: hsl(0, 0%, 0%);
+  border-radius: 50%;
+}
+
+.inverse {
+  border-color: hsla(0, 0%, 100%, .25);
+  border-top-color: hsl(0, 0%, 100%);
+}
+
+.block {
+  top: auto;
+  display: block;
+  margin: auto;
+}
+
+.text {
+  position: absolute;
+  overflow: hidden;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
