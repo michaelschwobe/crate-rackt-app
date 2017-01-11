@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Match, Miss } from 'react-router';
+import { BrowserRouter as Router, Match, Miss } from 'react-router';
 
 // Components.
 import Header from '../../components/Header';
@@ -16,7 +16,7 @@ import styles from './index.css';
 //--------------------------------------------------------------------------------------------------
 
 const App = () => (
-  <BrowserRouter>
+  <Router>
 
     <div className={styles.root}>
 
@@ -32,7 +32,7 @@ const App = () => (
 
     </div>
 
-  </BrowserRouter>
+  </Router>
 );
 
 export default App;
