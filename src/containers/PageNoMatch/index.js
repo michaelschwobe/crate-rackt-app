@@ -2,6 +2,6 @@ import React from 'react';
 
 //--------------------------------------------------------------------------------------------------
 
-const NoMatch = () => <div>NoMatch</div>;
+const PageNoMatch = () => <div>PageNoMatch</div>;
 
-export default NoMatch;
+export default PageNoMatch;

@@ -8,13 +8,13 @@ import Button from '../../components/Button';
 
 //--------------------------------------------------------------------------------------------------
 
-const About = () => (
+const PageAbout = () => (
   <div>
-    <div>About</div>
+    <div>PageAbout</div>
     <p>
       <Button round padding theme="primary" iconBefore="refresh" text="Refresh" onClick={refresh} />
     </p>
   </div>
 );
 
-export default About;
+export default PageAbout;
