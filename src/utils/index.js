@@ -22,11 +22,11 @@ export const refresh = () => {
  * Turns any string into a slug.
  *
  * @param   {string}  str  Original value. (ex: 'one Two & 3')
- * @param   {string}  sep  String seperator, defaults to dash.
+ * @param   {string}  sep  String seperator, defaults to underscore.
  *
- * @return  {string}       Modified value. (ex: 'one-two-and-3')
+ * @return  {string}       Modified value. (ex: 'one_two_and_3')
  */
-export const slugify = (str, sep = '-') => (
+export const slugify = (str, sep = '_') => (
   str.toString()
     .trim()
     .toLowerCase()
