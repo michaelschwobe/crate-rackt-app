@@ -1,0 +1,16 @@
+.root {
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: .375rem;
+  color: black;
+}
+
+.description,
+.error {
+  font-size: .6875rem;
+}
+
+.error {
+  font-style: italic;
+  color: #d00;
+}
