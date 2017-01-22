@@ -1,0 +1,27 @@
+.root {
+  min-width: 3.75rem;
+  max-width: 100%;
+  min-height: 2.5rem;
+  padding: .625rem;
+  vertical-align: top;
+  color: black;
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 0;
+  background-color: white;
+}
+
+.wide {
+  width: 100%;
+}
+
+.required {
+  border-color: #d00;
+}
+
+.readonly {
+  border-color: hsl(0, 0%, 90%);
+}
+
+.disabled {
+  opacity: .5;
+}
