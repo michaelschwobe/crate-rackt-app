@@ -73,13 +73,13 @@ storiesOf('Button', module)
       <div><Button theme="info" type="link" href="/" text="Example" /> ← info, link</div>
     </div>
   ))
-  .add('round', () => (
+  .add('rounded', () => (
     <div>
-      <div><Button round theme="primary" text="Example" /> ← round, button</div>
-      <div><Button round theme="primary" type="reset" text="Example" /> ← round, reset</div>
-      <div><Button round theme="primary" type="submit" text="Example" /> ← round, submit</div>
-      <div><Button round theme="primary" type="anchor" href="/" text="Example" /> ← round, anchor</div>
-      <div><Button round theme="primary" type="link" href="/" text="Example" /> ← round, link</div>
+      <div><Button rounded theme="primary" text="Example" /> ← rounded, button</div>
+      <div><Button rounded theme="primary" type="reset" text="Example" /> ← rounded, reset</div>
+      <div><Button rounded theme="primary" type="submit" text="Example" /> ← rounded, submit</div>
+      <div><Button rounded theme="primary" type="anchor" href="/" text="Example" /> ← rounded, anchor</div>
+      <div><Button rounded theme="primary" type="link" href="/" text="Example" /> ← rounded, link</div>
     </div>
   ))
   .add('wide', () => (
@@ -91,20 +91,20 @@ storiesOf('Button', module)
       <div><Button wide theme="primary" type="link" href="/" text="Example" /> ↑ wide, link</div>
     </div>
   ))
-  .add('padding', () => (
+  .add('padded', () => (
     <div>
-      <div><Button padding theme="primary" text="Example" /> ← padding, button</div>
-      <div><Button padding theme="primary" type="reset" text="Example" /> ← padding, reset</div>
-      <div><Button padding theme="primary" type="submit" text="Example" /> ← padding, submit</div>
-      <div><Button padding theme="primary" type="anchor" href="/" text="Example" /> ← padding, anchor</div>
-      <div><Button padding theme="primary" type="link" href="/" text="Example" /> ← padding, link</div>
+      <div><Button padded theme="primary" text="Example" /> ← padded, button</div>
+      <div><Button padded theme="primary" type="reset" text="Example" /> ← padded, reset</div>
+      <div><Button padded theme="primary" type="submit" text="Example" /> ← padded, submit</div>
+      <div><Button padded theme="primary" type="anchor" href="/" text="Example" /> ← padded, anchor</div>
+      <div><Button padded theme="primary" type="link" href="/" text="Example" /> ← padded, link</div>
 
       <div>
-        <Button padding theme="primary" text="Example" />
-        <Button padding theme="primary" type="reset" text="Example" />
-        <Button padding theme="primary" type="submit" text="Example" />
-        <Button padding theme="primary" type="anchor" href="/" text="Example" />
-        <Button padding theme="primary" type="link" href="/" text="Example" /> ← Vertical alignment
+        <Button padded theme="primary" text="Example" />
+        <Button padded theme="primary" type="reset" text="Example" />
+        <Button padded theme="primary" type="submit" text="Example" />
+        <Button padded theme="primary" type="anchor" href="/" text="Example" />
+        <Button padded theme="primary" type="link" href="/" text="Example" /> ← Vertical alignment
       </div>
     </div>
   ))
@@ -173,8 +173,8 @@ storiesOf('Button', module)
     <div>
       <div>
         <Button
-          round
-          padding
+          rounded
+          padded
           theme="primary"
           iconBefore="arrowRight"
           text="Example"
@@ -183,8 +183,8 @@ storiesOf('Button', module)
       <div>
         <Button
           type="anchor"
-          round
-          padding
+          rounded
+          padded
           theme="secondary"
           iconAfter="arrowLeft"
           text="Example"
@@ -193,8 +193,8 @@ storiesOf('Button', module)
       <div>
         <Button
           type="link"
-          round
-          padding
+          rounded
+          padded
           theme="tertiary"
           iconBefore="arrowRight"
           iconAfter="arrowLeft"
@@ -206,8 +206,8 @@ storiesOf('Button', module)
 
       <div>
         <Button
-          round
-          padding
+          rounded
+          padded
           theme="primary"
           iconBefore="arrowRight"
         >Example</Button> ← text as children, button
@@ -215,8 +215,8 @@ storiesOf('Button', module)
       <div>
         <Button
           type="anchor"
-          round
-          padding
+          rounded
+          padded
           theme="secondary"
           iconAfter="arrowLeft"
         >Example</Button> ← text as children, anchor
@@ -224,8 +224,8 @@ storiesOf('Button', module)
       <div>
         <Button
           type="link"
-          round
-          padding
+          rounded
+          padded
           theme="tertiary"
           iconBefore="arrowRight"
           iconAfter="arrowLeft"
@@ -236,8 +236,8 @@ storiesOf('Button', module)
 
       <div>
         <Button
-          round
-          padding
+          rounded
+          padded
           theme="primary"
           iconBefore="arrowRight"
           iconOnly
@@ -247,8 +247,8 @@ storiesOf('Button', module)
       <div>
         <Button
           type="anchor"
-          round
-          padding
+          rounded
+          padded
           theme="secondary"
           iconAfter="arrowLeft"
           iconOnly
@@ -258,8 +258,8 @@ storiesOf('Button', module)
       <div>
         <Button
           type="link"
-          round
-          padding
+          rounded
+          padded
           theme="tertiary"
           iconBefore="arrowRight"
           iconAfter="arrowLeft"
