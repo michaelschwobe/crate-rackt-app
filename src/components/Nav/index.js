@@ -31,4 +31,8 @@ Nav.propTypes = {
   className: PropTypes.string,
 };
 
+Nav.defaultProps = {
+  className: null,
+};
+
 export default Nav;

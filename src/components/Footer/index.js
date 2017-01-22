@@ -23,4 +23,8 @@ Footer.propTypes = {
   className: PropTypes.string,
 };
 
+Footer.defaultProps = {
+  className: null,
+};
+
 export default Footer;

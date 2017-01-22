@@ -59,8 +59,13 @@ LoadingWrapper.propTypes = {
 };
 
 LoadingWrapper.defaultProps = {
+  className: null,
+  loading: false,
+  overlay: false,
   block: true,
+  inverse: false,
   size: 2,
+  speed: null,
 };
 
 export default LoadingWrapper;

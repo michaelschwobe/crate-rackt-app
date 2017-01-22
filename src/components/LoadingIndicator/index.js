@@ -39,4 +39,12 @@ LoadingIndicator.propTypes = {
   speed: PropTypes.number,
 };
 
+LoadingIndicator.defaultProps = {
+  className: null,
+  block: false,
+  inverse: false,
+  size: null,
+  speed: null,
+};
+
 export default LoadingIndicator;

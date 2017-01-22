@@ -44,4 +44,8 @@ Icon.propTypes = {
   type: PropTypes.oneOf(Object.keys(icons)).isRequired,
 };
 
+Icon.defaultProps = {
+  className: null,
+};
+
 export default Icon;

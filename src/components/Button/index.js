@@ -91,7 +91,18 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
+  className: null,
+  children: null,
+  text: null,
   type: 'button',
+  href: null,
+  theme: null,
+  rounded: false,
+  wide: false,
+  padded: false,
+  iconBefore: null,
+  iconAfter: null,
+  iconOnly: false,
 };
 
 export default Button;

@@ -21,4 +21,8 @@ Header.propTypes = {
   className: PropTypes.string,
 };
 
+Header.defaultProps = {
+  className: null,
+};
+
 export default Header;
