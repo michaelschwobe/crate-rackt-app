@@ -1,5 +1,5 @@
 import React from 'react';
-import { MemoryRouter } from 'react-router';
+import { MemoryRouter } from 'react-router-dom';
 import { storiesOf } from '@kadira/storybook';
 
 // Siblings.
@@ -14,7 +14,7 @@ storiesOf('Nav', module)
     </MemoryRouter>
   ))
   .add('active on "/example"', () => (
-    <MemoryRouter location="/example">
+    <MemoryRouter initialEntries={['/', '/about', '/example']} initialIndex={2}>
       <Nav />
     </MemoryRouter>
   ));

@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { Link } from 'react-router';
+import { NavLink } from 'react-router-dom';
 import classNames from 'classnames';
 
 // Siblings.
@@ -14,13 +14,13 @@ const Nav = ({ className, ...props }) => (
 
     <ul className={styles.menu}>
       <li className={styles.item}>
-        <Link className={styles.link} activeClassName={styles.active} to="/" activeOnlyWhenExact>Home</Link>
+        <NavLink className={styles.link} activeClassName={styles.active} to="/" exact>Home</NavLink>
       </li>
       <li className={styles.item}>
-        <Link className={styles.link} activeClassName={styles.active} to="/about">About</Link>
+        <NavLink className={styles.link} activeClassName={styles.active} to="/about">About</NavLink>
       </li>
       <li className={styles.item}>
-        <Link className={styles.link} activeClassName={styles.active} to="/example">NoMatch</Link>
+        <NavLink className={styles.link} activeClassName={styles.active} to="/example">NoMatch</NavLink>
       </li>
     </ul>
 

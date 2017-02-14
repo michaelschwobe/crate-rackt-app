@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { Link } from 'react-router';
+import { NavLink } from 'react-router-dom';
 import classNames from 'classnames';
 
 // Components.
@@ -63,9 +63,9 @@ const Button = (props) => {
   );
 
   if (href) {
-    // Render a <Link> component.
+    // Render a <NavLink> component.
     if (type === 'link') {
-      return <Link className={classesAnchor} to={href} {...otherProps}>{renderChildren}</Link>;
+      return <NavLink className={classesAnchor} to={href} {...otherProps}>{renderChildren}</NavLink>;
     }
     // Render a <a> tag.
     return <a className={classesAnchor} href={href} {...otherProps}>{renderChildren}</a>;

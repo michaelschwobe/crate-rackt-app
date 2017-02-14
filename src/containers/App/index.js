@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Match, Miss } from 'react-router';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // Components.
 import Header from '../../components/Header';
@@ -23,9 +23,11 @@ const App = () => (
       <Header className={styles.header} />
 
       <main className={styles.main} role="main">
-        <Match pattern="/" exactly component={PageHome} />
-        <Match pattern="/about" component={PageAbout} />
-        <Miss component={PageNoMatch} />
+        <Switch>
+          <Route path="/" exact component={PageHome} />
+          <Route path="/about" component={PageAbout} />
+          <Route component={PageNoMatch} />
+        </Switch>
       </main>
 
       <Footer className={styles.footer} />

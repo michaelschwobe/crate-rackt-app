@@ -25,19 +25,19 @@
     "skeleton"
   ],
   "devDependencies": {
-    "custom-react-scripts": "^0.0.21",
-    "eslint": "^3.13.0",
+    "custom-react-scripts": "^0.0.23",
+    "eslint": "^3.15.0",
     "eslint-config-airbnb": "latest",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-jsx-a11y": "^3.0.2 || ^4.0.0",
     "eslint-plugin-react": "^6.9.0"
   },
   "dependencies": {
-    "@kadira/storybook": "^2.35.2",
+    "@kadira/storybook": "^2.35.3",
     "classnames": "^2.2.5",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "react-router": "next",
+    "react-router-dom": "next",
     "sanitize.css": "^4.1.0"
   },
   "scripts": {

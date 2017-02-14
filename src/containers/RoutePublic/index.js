@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react';
-import { Match, Redirect } from 'react-router';
+import { Route, Redirect } from 'react-router-dom';
 
 //--------------------------------------------------------------------------------------------------
 
-const MatchWhenUnauthed = ({ component: Component, authed, redirectTo, ...otherProps }) => (
-  <Match
+const RoutePublic = ({ component: Component, authed, redirectTo, ...otherProps }) => (
+  <Route
     {...otherProps}
     render={props => (
       (authed === false)
@@ -14,14 +14,15 @@ const MatchWhenUnauthed = ({ component: Component, authed, redirectTo, ...otherP
   />
 );
 
-MatchWhenUnauthed.propTypes = {
+RoutePublic.propTypes = {
   component: PropTypes.func.isRequired,
   authed: PropTypes.bool,
   redirectTo: PropTypes.string,
 };
 
-MatchWhenUnauthed.defaultProps = {
+RoutePublic.defaultProps = {
   authed: false,
+  redirectTo: null,
 };
 
-export default MatchWhenUnauthed;
+export default RoutePublic;
