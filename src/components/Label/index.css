@@ -10,7 +10,11 @@
   font-size: .6875rem;
 }
 
+.required,
+.error {
+  color: #d00;
+}
+
 .error {
   font-style: italic;
-  color: #d00;
 }

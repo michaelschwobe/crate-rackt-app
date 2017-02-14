@@ -43,7 +43,7 @@ storiesOf('CheckboxRadio', module)
         <CheckboxRadio type="radio" name="c" id="c1" text="c1" />{' '}
         <CheckboxRadio type="radio" name="c" id="c2" text="c2" defaultChecked />{' '}
         <CheckboxRadio type="radio" name="c" id="c3" text="c3" />{' '}
-        <CheckboxRadio type="radio" name="c" id="c4" text="c4" />
+        <CheckboxRadio type="radio" name="c" id="c4" text="c4" /> ← inline
       </div>
     </div>
   ))
