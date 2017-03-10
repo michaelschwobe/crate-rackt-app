@@ -19,9 +19,17 @@ storiesOf('Icon', module)
   ))
   .add('vertical alignment', () => (
     <div>
-      <div style={{ fontSize: '1em' }}>X{Object.keys(icons).map(icon => <Icon key={icon} type={icon} />)}X</div>
-      <div style={{ fontSize: '2em' }}>X{Object.keys(icons).map(icon => <Icon key={icon} type={icon} />)}X</div>
-      <div style={{ fontSize: '4em' }}>X{Object.keys(icons).map(icon => <Icon key={icon} type={icon} />)}X</div>
-      <div style={{ fontSize: '8em' }}>X{Object.keys(icons).map(icon => <Icon key={icon} type={icon} />)}X</div>
+      <div style={{ fontSize: '1em' }}>
+        X{Object.keys(icons).map(icon => <Icon key={icon} type={icon} />)}X
+      </div>
+      <div style={{ fontSize: '2em' }}>
+        X{Object.keys(icons).map(icon => <Icon key={icon} type={icon} />)}X
+      </div>
+      <div style={{ fontSize: '4em' }}>
+        X{Object.keys(icons).map(icon => <Icon key={icon} type={icon} />)}X
+      </div>
+      <div style={{ fontSize: '8em' }}>
+        X{Object.keys(icons).map(icon => <Icon key={icon} type={icon} />)}X
+      </div>
     </div>
   ));

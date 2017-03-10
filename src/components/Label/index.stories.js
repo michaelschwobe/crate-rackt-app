@@ -4,15 +4,19 @@ import { storiesOf } from '@kadira/storybook';
 // Siblings.
 import Label from './';
 
+// Config.
+import { lorem } from '../../../.storybook/config';
+
+const text = lorem.substring(0, 17);
+
 //--------------------------------------------------------------------------------------------------
 
 storiesOf('Label', module)
   .add('default', () => (
     <div>
-      <div><Label htmlFor="Example" text="Example" /> ← default</div>
-      <div><Label htmlFor="Example" text="Example" isRequired /> ← isRequired</div>
-      <div><Label htmlFor="Example" text="Example" isDescription /> ← isDescription</div>
-      <div><Label htmlFor="Example" text="Example" isError /> ← isError</div>
-      <div><Label htmlFor="Example" text="Example" isRequired isDescription isError /> ← all</div>
+      <div><Label text={text} htmlFor="id" /> ← default</div>
+      <div><Label text={text} htmlFor="id" isRequired /> ← isRequired</div>
+      <div><Label text={text} htmlFor="id" isDescription /> ← isDescription</div>
+      <div><Label text={text} htmlFor="id" isError /> ← isError</div>
     </div>
   ));
