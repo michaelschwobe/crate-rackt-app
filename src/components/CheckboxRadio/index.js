@@ -35,7 +35,7 @@ const CheckboxRadio = (props) => {
     [styles.reverse]: reverse,
     [styles.wide]: wide,
     [styles.required]: required,
-    [styles.readonly]: readOnly,
+    [styles.readOnly]: readOnly,
     [styles.disabled]: disabled,
   }, className);
   const classesInput = styles.input;

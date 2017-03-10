@@ -17,7 +17,7 @@
   border-color: #d00;
 }
 
-.readonly:not(label) {
+.readOnly:not(label) {
   border-color: hsl(0, 0%, 90%);
 }
 

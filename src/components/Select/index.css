@@ -24,7 +24,7 @@
   border-color: #d00;
 }
 
-.readonly {
+.readOnly {
   border-color: hsl(0, 0%, 90%);
   background-image: none;
 }

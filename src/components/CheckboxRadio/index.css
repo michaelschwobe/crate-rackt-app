@@ -80,7 +80,7 @@
   border-color: #d00;
 }
 
-.readonly .control {
+.readOnly .control {
   border-color: hsl(0, 0%, 90%);
 }
 
