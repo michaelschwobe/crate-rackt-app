@@ -20,10 +20,6 @@
   width: 100%;
 }
 
-.required {
-  border-color: #d00;
-}
-
 .readOnly {
   border-color: hsl(0, 0%, 90%);
   background-image: none;

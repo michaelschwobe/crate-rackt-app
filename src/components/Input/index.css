@@ -13,10 +13,6 @@
   width: 100%;
 }
 
-.required:not(label) {
-  border-color: #d00;
-}
-
 .readOnly:not(label) {
   border-color: hsl(0, 0%, 90%);
 }
