@@ -11,13 +11,13 @@
   position: relative;
   top: -.125em;
   display: inline-block;
+  vertical-align: middle;
   width: .875em;
   height: .875em;
-  animation: spin 1s infinite linear;
-  vertical-align: middle;
   border: .125em solid hsla(0, 0%, 0%, .1);
   border-top-color: hsl(0, 0%, 0%);
   border-radius: 50%;
+  animation: spin 1s infinite linear;
 }
 
 .inverse {
@@ -34,8 +34,8 @@
 .text {
   position: absolute;
   overflow: hidden;
-  clip-path: inset(100%);
   clip: rect(0 0 0 0);
+  clip-path: inset(100%);
   width: 1px;
   height: 1px;
   margin: -1px;

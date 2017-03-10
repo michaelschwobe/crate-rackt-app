@@ -7,13 +7,13 @@
   padding: 0 .625rem;
   padding-right: 1.8125rem; /* icon width (9px) + control padding * 2 (20px) */
   color: black;
-  border: 1px solid hsl(0, 0%, 80%);
-  border-radius: 0;
   background-color: white;
   background-image: url('data:image/svg+xml,%3Csvg viewBox=\'0 0 24 24\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M21 5l3 3.06L12 20 0 8.06 3 5l9 9z\' /%3E%3C/svg%3E');
-  background-repeat: no-repeat;
   background-position: right .625rem center; /* control padding */
   background-size: .5625rem; /* icon width */
+  background-repeat: no-repeat;
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 0;
 }
 
 .wide {
@@ -21,8 +21,8 @@
 }
 
 .readOnly {
-  border-color: hsl(0, 0%, 90%);
   background-image: none;
+  border-color: hsl(0, 0%, 90%);
 }
 
 .disabled {

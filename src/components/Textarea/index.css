@@ -1,13 +1,13 @@
 .root {
+  vertical-align: top;
   min-width: 3.75rem;
   max-width: 100%;
   min-height: 2.5rem;
   padding: .625rem;
-  vertical-align: top;
   color: black;
+  background-color: white;
   border: 1px solid hsl(0, 0%, 80%);
   border-radius: 0;
-  background-color: white;
 }
 
 .wide {
