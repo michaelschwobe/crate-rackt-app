@@ -2,6 +2,6 @@ import React from 'react';
 
 //--------------------------------------------------------------------------------------------------
 
-const PageHome = () => <div>PageHome</div>;
+const PageAbout = () => <div>PageAbout</div>;
 
-export default PageHome;
+export default PageAbout;
