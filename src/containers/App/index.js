@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // Components.
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 // Routes.
 import PageHome from '../PageHome';
