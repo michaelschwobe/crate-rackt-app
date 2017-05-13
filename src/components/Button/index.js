@@ -11,24 +11,21 @@ import styles from './index.css';
 
 //--------------------------------------------------------------------------------------------------
 
-const Button = (props) => {
-  // Props.
-  const {
-    className,
-    children,
-    text,
-    type,
-    href,
-    theme,
-    rounded,
-    wide,
-    padded,
-    iconBefore,
-    iconAfter,
-    iconOnly,
-    ...otherProps
-  } = props;
-
+const Button = ({
+  className,
+  children,
+  text,
+  type,
+  href,
+  theme,
+  rounded,
+  wide,
+  padded,
+  iconBefore,
+  iconAfter,
+  iconOnly,
+  ...otherProps
+}) => {
   // Throw an error to guarantee we never render an empty button.
   if (!text === !children) {
     throw new Error('Failed prop type: Component must contain either `text` or `children`.');
@@ -50,8 +47,9 @@ const Button = (props) => {
   // 1. Its empty.
   // 2. props.text isn't empty.
   // 3. Button displays only the icon(s).
+  const moreProps = { ...otherProps };
   if (!!text && (!otherProps.title && iconOnly)) {
-    otherProps.title = text;
+    moreProps.title = text;
   }
 
   // Inner template.
@@ -66,14 +64,26 @@ const Button = (props) => {
   if (href) {
     // Render a <NavLink> component.
     if (type === 'link') {
-      return <NavLink className={classesAnchor} to={href} {...otherProps}>{renderChildren}</NavLink>;
+      return (
+        <NavLink className={classesAnchor} to={href} {...moreProps}>
+          {renderChildren}
+        </NavLink>
+      );
     }
     // Render a <a> tag.
-    return <a className={classesAnchor} href={href} {...otherProps}>{renderChildren}</a>;
+    return (
+      <a className={classesAnchor} href={href} {...moreProps}>
+        {renderChildren}
+      </a>
+    );
   }
 
   // Render a <button> tag.
-  return <button className={classesButton} type={type} {...otherProps}>{renderChildren}</button>;
+  return (
+    <button className={classesButton} type={type} {...moreProps}>
+      {renderChildren}
+    </button>
+  );
 };
 
 Button.propTypes = {
@@ -82,7 +92,15 @@ Button.propTypes = {
   text: PropTypes.string,
   type: PropTypes.oneOf(['button', 'reset', 'submit', 'link', 'anchor']),
   href: PropTypes.string,
-  theme: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'danger', 'warning', 'success', 'info']),
+  theme: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'tertiary',
+    'danger',
+    'warning',
+    'success',
+    'info',
+  ]),
   rounded: PropTypes.bool,
   wide: PropTypes.bool,
   padded: PropTypes.bool,

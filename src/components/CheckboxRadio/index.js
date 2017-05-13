@@ -14,31 +14,33 @@ export const types = ['checkbox', 'radio'];
 
 //--------------------------------------------------------------------------------------------------
 
-const CheckboxRadio = (props) => {
-  const {
+const CheckboxRadio = ({
+  className,
+  classNameControl,
+  classNameLabel,
+  type,
+  id,
+  name,
+  text,
+  reverse,
+  wide,
+  required,
+  readOnly,
+  disabled,
+  ...otherProps
+}) => {
+  const classesRoot = classNames(
+    styles.root,
+    {
+      [styles.normal]: !reverse,
+      [styles.reverse]: reverse,
+      [styles.wide]: wide,
+      [styles.required]: required,
+      [styles.readOnly]: readOnly,
+      [styles.disabled]: disabled,
+    },
     className,
-    classNameControl,
-    classNameLabel,
-    type,
-    id,
-    name,
-    text,
-    reverse,
-    wide,
-    required,
-    readOnly,
-    disabled,
-    ...otherProps
-  } = props;
-
-  const classesRoot = classNames(styles.root, {
-    [styles.normal]: !reverse,
-    [styles.reverse]: reverse,
-    [styles.wide]: wide,
-    [styles.required]: required,
-    [styles.readOnly]: readOnly,
-    [styles.disabled]: disabled,
-  }, className);
+  );
   const classesInput = styles.input;
   const classesControl = classNames(styles.control, styles[`${type}-control`], classNameControl);
   const classesLabel = classNames(styles.text, classNameLabel);

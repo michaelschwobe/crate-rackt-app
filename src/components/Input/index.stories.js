@@ -12,7 +12,7 @@ import { setControlProps, renderControlStories } from '../../../.storybook/confi
 storiesOf('Input', module)
   .add('default', () => (
     <div>
-      {types.map((type) => {
+      {types.map(type => {
         const otherProps = setControlProps(type, false);
         otherProps.type = type;
         return renderControlStories(Input, type, otherProps);
@@ -21,7 +21,7 @@ storiesOf('Input', module)
   ))
   .add('wide', () => (
     <div>
-      {types.map((type) => {
+      {types.map(type => {
         const otherProps = setControlProps(type, false);
         otherProps.type = type;
         otherProps.wide = true;
@@ -31,7 +31,7 @@ storiesOf('Input', module)
   ))
   .add('mixed', () => (
     <div>
-      {types.map((type) => {
+      {types.map(type => {
         const otherProps = setControlProps(type, true);
         otherProps.type = type;
         otherProps.wide = true;

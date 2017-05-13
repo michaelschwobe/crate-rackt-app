@@ -26,7 +26,7 @@ const LoadingIndicator = ({ className, block, inverse, size, speed }) => {
   return (
     <span className={classNameRoot} style={style}>
 
-      <span className={styles.text}>Loading&hellip;</span>
+      <span className={styles.text}>Loading…</span>
 
     </span>
   );

@@ -10,21 +10,15 @@ import styles from './index.css';
 
 //--------------------------------------------------------------------------------------------------
 
-const Label = (props) => {
-  const {
+const Label = ({ className, htmlFor, text, isRequired, isDescription, isError, ...otherProps }) => {
+  const classes = classNames(
+    styles.root,
+    {
+      [styles.description]: !!isDescription && !isRequired,
+      [styles.error]: !!isError && !isRequired,
+    },
     className,
-    htmlFor,
-    text,
-    isRequired,
-    isDescription,
-    isError,
-    ...otherProps
-  } = props;
-
-  const classes = classNames(styles.root, {
-    [styles.description]: !!isDescription && !isRequired,
-    [styles.error]: !!isError && !isRequired,
-  }, className);
+  );
 
   const htmlForSlug = slugify(htmlFor);
 

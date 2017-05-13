@@ -10,26 +10,28 @@ import styles from './index.css';
 
 //--------------------------------------------------------------------------------------------------
 
-const Textarea = (props) => {
-  const {
+const Textarea = ({
+  className,
+  id,
+  name,
+  rows,
+  wide,
+  required,
+  readOnly,
+  disabled,
+  ...otherProps
+}) => {
+  const classes = classNames(
+    styles.root,
+    {
+      [styles.small]: !rows,
+      [styles.wide]: wide,
+      [styles.required]: required,
+      [styles.readOnly]: readOnly,
+      [styles.disabled]: disabled,
+    },
     className,
-    id,
-    name,
-    rows,
-    wide,
-    required,
-    readOnly,
-    disabled,
-    ...otherProps
-  } = props;
-
-  const classes = classNames(styles.root, {
-    [styles.small]: !rows,
-    [styles.wide]: wide,
-    [styles.required]: required,
-    [styles.readOnly]: readOnly,
-    [styles.disabled]: disabled,
-  }, className);
+  );
 
   const nameSlug = slugify(name);
   const idSlug = id ? slugify(id) : nameSlug;

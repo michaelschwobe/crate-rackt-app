@@ -13,6 +13,4 @@ storiesOf('Header', module)
       {story()}
     </MemoryRouter>
   ))
-  .add('default', () => (
-    <Header />
-  ));
+  .add('default', () => <Header />);

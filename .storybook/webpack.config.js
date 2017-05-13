@@ -5,13 +5,15 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
   module: {
-    loaders: [{
-      test: /\.css$/,
-      loader: 'style!css?modules&importLoaders=1&localIdentName=[path][name]__[local]___[hash:base64:5]!postcss',
-      include: path.resolve(__dirname, '../'),
-    }],
+    loaders: [
+      {
+        test: /\.css$/,
+        loader: 'style!css?modules&importLoaders=1&localIdentName=[path][name]__[local]___[hash:base64:5]!postcss',
+        include: path.resolve(__dirname, '../'),
+      },
+    ],
   },
-  postcss: () => ([
+  postcss: () => [
     autoprefixer({
       browsers: [
         '>1%',
@@ -20,5 +22,5 @@ module.exports = {
         'not ie < 9', // React doesn't support IE8 anyway
       ],
     }),
-  ]),
+  ],
 };

@@ -17,7 +17,6 @@ export const refresh = () => {
 /* Strings
 /*------------------------------------------------------------------------------------------------*/
 
-
 /**
  * Turns any string into a slug.
  *
@@ -26,15 +25,14 @@ export const refresh = () => {
  *
  * @return  {string}       Modified value. (ex: 'one_two_and_3')
  */
-export const slugify = (str, sep = '_') => (
-  str.toString()
+export const slugify = (str, sep = '_') =>
+  str
+    .toString()
     .trim()
     .toLowerCase()
     .replace(/ /g, sep)
     .replace(/&/g, 'and')
-    .replace(/([^a-zA-Z0-9._-]+)/, '')
-);
-
+    .replace(/([^a-zA-Z0-9._-]+)/, '');
 
 /**
  * Title cases a string.
@@ -43,12 +41,8 @@ export const slugify = (str, sep = '_') => (
  *
  * @return {string}       Modified value. (ex: 'I’m Awesome')
  */
-export const titleCase = str => (
-  str.toLowerCase().split(' ').map(word => (
-    word.replace(word[0], word[0].toUpperCase())
-  )).join(' ')
-);
-
+export const titleCase = str =>
+  str.toLowerCase().split(' ').map(word => word.replace(word[0], word[0].toUpperCase())).join(' ');
 
 /**
  * Prepares HTML to use within React's dangerouslySetInnerHTML.

@@ -12,7 +12,15 @@ const Footer = ({ className }) => (
 
     <div className={styles.copyright}>
       <small className={styles.small}>
-        <span className={styles.avoidwrap}>&copy; {(new Date()).getFullYear()} <a className={styles.link} href="http://example.com">Example, LLC</a>.</span>{' '}
+        <span className={styles.avoidwrap}>
+          ©
+          {' '}
+          {new Date().getFullYear()}
+          {' '}
+          <a className={styles.link} href="http://example.com">Example, LLC</a>
+          .
+        </span>
+        {' '}
         <span className={styles.avoidwrap}>All Rights Reserved.</span>
       </small>
     </div>

@@ -14,7 +14,7 @@ const types = ['checkbox', 'radio'];
 storiesOf('CheckboxRadio', module)
   .add('default', () => (
     <div>
-      {types.map((type) => {
+      {types.map(type => {
         const otherProps = setControlProps(type, false);
         otherProps.type = type;
         otherProps.text = lorem.substring(0, 11);
@@ -24,7 +24,7 @@ storiesOf('CheckboxRadio', module)
   ))
   .add('defaultChecked', () => (
     <div>
-      {types.map((type) => {
+      {types.map(type => {
         const otherProps = setControlProps(type, false);
         otherProps.type = type;
         otherProps.text = lorem.substring(0, 11);
@@ -35,7 +35,7 @@ storiesOf('CheckboxRadio', module)
   ))
   .add('reverse', () => (
     <div>
-      {types.map((type) => {
+      {types.map(type => {
         const otherProps = setControlProps(type, false);
         otherProps.type = type;
         otherProps.text = lorem.substring(0, 11);
@@ -46,7 +46,7 @@ storiesOf('CheckboxRadio', module)
   ))
   .add('wide', () => (
     <div>
-      {types.map((type) => {
+      {types.map(type => {
         const otherProps = setControlProps(type, false);
         otherProps.type = type;
         otherProps.text = lorem.substring(0, 11);
@@ -57,7 +57,7 @@ storiesOf('CheckboxRadio', module)
   ))
   .add('mixed', () => (
     <div>
-      {types.map((type) => {
+      {types.map(type => {
         const otherProps = setControlProps(type, true);
         otherProps.className = 'example';
         otherProps.type = type;

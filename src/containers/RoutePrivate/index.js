@@ -7,11 +7,11 @@ import { Route, Redirect } from 'react-router-dom';
 const RoutePrivate = ({ component: Component, authed, ...otherProps }) => (
   <Route
     {...otherProps}
-    render={props => (
-      (authed === true)
+    render={props =>
+      (authed === true
         ? <Component {...props} />
-        : <Redirect to={{ pathname: '/login', state: { from: props.location } }} /> // eslint-disable-line react/prop-types
-    )}
+        : <Redirect to={{ pathname: '/login', state: { from: props.location } }} />) // eslint-disable-line react/prop-types
+    }
   />
 );
 

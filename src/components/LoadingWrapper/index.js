@@ -18,17 +18,16 @@ const LoadingWrapper = ({ children, className, loading, overlay, block, inverse,
   // Is loading, overlay children with loading indicator.
   if (overlay) {
     return (
-      <div className={classNames(styles.wrapper, className, { [styles.inverse]: inverse })}>
+      <div
+        className={classNames(styles.wrapper, className, {
+          [styles.inverse]: inverse,
+        })}
+      >
 
         {Children.only(children)}
 
         <div className={styles.overlay}>
-          <LoadingIndicator
-            block={block}
-            inverse={inverse}
-            size={size}
-            speed={speed}
-          />
+          <LoadingIndicator block={block} inverse={inverse} size={size} speed={speed} />
         </div>
 
       </div>

@@ -31,27 +31,30 @@ export const types = [
 
 //--------------------------------------------------------------------------------------------------
 
-const Input = (props) => {
-  const {
+const Input = ({
+  className,
+  type,
+  id,
+  name,
+  wide,
+  required,
+  readOnly,
+  disabled,
+  ...otherProps
+}) => {
+  const Tag = type === 'checkbox' || type === 'radio' ? CheckboxRadio : 'input';
+
+  const classes = classNames(
+    styles.root,
+    [styles[`${type}`]],
+    {
+      [styles.wide]: wide,
+      [styles.required]: required,
+      [styles.readOnly]: readOnly,
+      [styles.disabled]: disabled,
+    },
     className,
-    type,
-    id,
-    name,
-    wide,
-    required,
-    readOnly,
-    disabled,
-    ...otherProps
-  } = props;
-
-  const Tag = (type === 'checkbox' || type === 'radio') ? CheckboxRadio : 'input';
-
-  const classes = classNames(styles.root, [styles[`${type}`]], {
-    [styles.wide]: wide,
-    [styles.required]: required,
-    [styles.readOnly]: readOnly,
-    [styles.disabled]: disabled,
-  }, className);
+  );
 
   const nameSlug = slugify(name);
   const idSlug = id ? slugify(id) : nameSlug;

@@ -15,13 +15,19 @@ const Nav = ({ className, ...props }) => (
 
     <ul className={styles.menu}>
       <li className={styles.item}>
-        <NavLink className={styles.link} activeClassName={styles.active} to="/" exact>Home</NavLink>
+        <NavLink className={styles.link} activeClassName={styles.active} to="/" exact>
+          Home
+        </NavLink>
       </li>
       <li className={styles.item}>
-        <NavLink className={styles.link} activeClassName={styles.active} to="/about">About</NavLink>
+        <NavLink className={styles.link} activeClassName={styles.active} to="/about">
+          About
+        </NavLink>
       </li>
       <li className={styles.item}>
-        <NavLink className={styles.link} activeClassName={styles.active} to="/example">NoMatch</NavLink>
+        <NavLink className={styles.link} activeClassName={styles.active} to="/example">
+          NoMatch
+        </NavLink>
       </li>
     </ul>
 

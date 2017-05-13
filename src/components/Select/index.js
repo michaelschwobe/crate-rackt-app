@@ -10,26 +10,28 @@ import styles from './index.css';
 
 //--------------------------------------------------------------------------------------------------
 
-const Select = (props) => {
-  const {
+const Select = ({
+  className,
+  id,
+  name,
+  placeholder,
+  options,
+  wide,
+  required,
+  readOnly,
+  disabled,
+  ...otherProps
+}) => {
+  const classes = classNames(
+    styles.root,
+    {
+      [styles.wide]: wide,
+      [styles.required]: required,
+      [styles.readOnly]: readOnly,
+      [styles.disabled]: disabled,
+    },
     className,
-    id,
-    name,
-    placeholder,
-    options,
-    wide,
-    required,
-    readOnly,
-    disabled,
-    ...otherProps
-  } = props;
-
-  const classes = classNames(styles.root, {
-    [styles.wide]: wide,
-    [styles.required]: required,
-    [styles.readOnly]: readOnly,
-    [styles.disabled]: disabled,
-  }, className);
+  );
 
   const nameSlug = slugify(name);
   const idSlug = id ? slugify(id) : nameSlug;
@@ -44,7 +46,7 @@ const Select = (props) => {
       {...otherProps}
     >
       <option value="">{placeholder != null ? placeholder : ' '}</option>
-      {options.map((option) => {
+      {options.map(option => {
         if (typeof option === 'object') {
           return <option key={option.id} value={option.id}>{option.text}</option>;
         }
@@ -61,10 +63,12 @@ Select.propTypes = {
   placeholder: PropTypes.string,
   options: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),
-    PropTypes.arrayOf(PropTypes.shape({
-      id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-      text: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    })),
+    PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+        text: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+      }),
+    ),
   ]).isRequired,
   wide: PropTypes.bool,
   required: PropTypes.bool,

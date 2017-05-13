@@ -6,7 +6,4 @@ import Footer from './';
 
 //--------------------------------------------------------------------------------------------------
 
-storiesOf('Footer', module)
-  .add('default', () => (
-    <Footer />
-  ));
+storiesOf('Footer', module).add('default', () => <Footer />);
