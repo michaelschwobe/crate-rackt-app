@@ -6,9 +6,9 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 // Routes.
-import PageHome from '../PageHome';
-import PageAbout from '../PageAbout';
-import PageNoMatch from '../PageNoMatch';
+import PageHome from '../../pages/PageHome';
+import PageAbout from '../../pages/PageAbout';
+import PageNoMatch from '../../pages/PageNoMatch';
 
 // Siblings.
 import styles from './index.css';
