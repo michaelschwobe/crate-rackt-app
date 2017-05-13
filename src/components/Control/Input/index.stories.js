@@ -5,7 +5,7 @@ import { storiesOf } from '@kadira/storybook';
 import Input, { types } from './';
 
 // Config.
-import { setControlProps, renderControlStories } from '../../../.storybook/config';
+import { setControlProps, renderControlStories } from '../../../../.storybook/config';
 
 //--------------------------------------------------------------------------------------------------
 

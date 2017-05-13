@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 // Utils.
-import { slugify } from '../../utils';
+import { slugify } from '../../../utils';
 
 // Components.
 import CheckboxRadio, { types as otherTypes } from '../CheckboxRadio';

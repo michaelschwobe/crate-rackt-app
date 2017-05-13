@@ -5,7 +5,7 @@ import { storiesOf } from '@kadira/storybook';
 import Textarea from './';
 
 // Config.
-import { lorem, renderControlStories } from '../../../.storybook/config';
+import { lorem, renderControlStories } from '../../../../.storybook/config';
 
 //--------------------------------------------------------------------------------------------------
 

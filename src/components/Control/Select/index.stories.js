@@ -5,7 +5,7 @@ import { storiesOf } from '@kadira/storybook';
 import Select from './';
 
 // Config.
-import { optionsArr, optionsObj, renderControlStories } from '../../../.storybook/config';
+import { optionsArr, optionsObj, renderControlStories } from '../../../../.storybook/config';
 
 //--------------------------------------------------------------------------------------------------
 

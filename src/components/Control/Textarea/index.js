@@ -3,19 +3,18 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 // Utils.
-import { slugify } from '../../utils';
+import { slugify } from '../../../utils';
 
 // Siblings.
 import styles from './index.css';
 
 //--------------------------------------------------------------------------------------------------
 
-const Select = ({
+const Textarea = ({
   className,
   id,
   name,
-  placeholder,
-  options,
+  rows,
   wide,
   required,
   readOnly,
@@ -25,6 +24,7 @@ const Select = ({
   const classes = classNames(
     styles.root,
     {
+      [styles.small]: !rows,
       [styles.wide]: wide,
       [styles.required]: required,
       [styles.readOnly]: readOnly,
@@ -37,53 +37,38 @@ const Select = ({
   const idSlug = id ? slugify(id) : nameSlug;
 
   return (
-    <select
+    <textarea
       className={classes}
       id={idSlug}
       name={nameSlug}
+      rows={rows || 1}
       required={required}
-      disabled={disabled || readOnly}
+      readOnly={readOnly}
+      disabled={disabled}
       {...otherProps}
-    >
-      <option value="">{placeholder != null ? placeholder : ' '}</option>
-      {options.map(option => {
-        if (typeof option === 'object') {
-          return <option key={option.id} value={option.id}>{option.text}</option>;
-        }
-        return <option key={option} value={option}>{option}</option>;
-      })}
-    </select>
+    />
   );
 };
 
-Select.propTypes = {
+Textarea.propTypes = {
   className: PropTypes.string,
   id: PropTypes.string,
   name: PropTypes.string.isRequired,
-  placeholder: PropTypes.string,
-  options: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),
-    PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-        text: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-      }),
-    ),
-  ]).isRequired,
+  rows: PropTypes.number,
   wide: PropTypes.bool,
   required: PropTypes.bool,
   readOnly: PropTypes.bool,
   disabled: PropTypes.bool,
 };
 
-Select.defaultProps = {
+Textarea.defaultProps = {
   className: null,
   id: null,
-  placeholder: null,
+  rows: null,
   wide: false,
   required: false,
   readOnly: false,
   disabled: false,
 };
 
-export default Select;
+export default Textarea;

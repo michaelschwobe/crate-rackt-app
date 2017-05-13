@@ -5,7 +5,7 @@ import { storiesOf } from '@kadira/storybook';
 import CheckboxRadio from './';
 
 // Config.
-import { lorem, setControlProps, renderControlStories } from '../../../.storybook/config';
+import { lorem, setControlProps, renderControlStories } from '../../../../.storybook/config';
 
 const types = ['checkbox', 'radio'];
 

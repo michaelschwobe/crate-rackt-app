@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 // Utils.
-import { slugify } from '../../utils';
+import { slugify } from '../../../utils';
 
 // Siblings.
 import styles from './index.css';
