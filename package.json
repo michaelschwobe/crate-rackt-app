@@ -25,7 +25,6 @@
     "skeleton"
   ],
   "dependencies": {
-    "@kadira/storybook": "^2.35.3",
     "classnames": "^2.2.5",
     "prop-types": "^15.5.10",
     "react": "^15.4.1",
@@ -34,6 +33,7 @@
     "sanitize.css": "^5.0.0"
   },
   "devDependencies": {
+    "@kadira/storybook": "^2.21.0",
     "custom-react-scripts": "^0.0.23",
     "eslint": "^3.15.0",
     "eslint-config-airbnb": "^14.1.0",
@@ -47,8 +47,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9002",
-    "build-storybook": "build-storybook -o .storybook-build"
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "eslintConfig": {
     "extends": "airbnb",
