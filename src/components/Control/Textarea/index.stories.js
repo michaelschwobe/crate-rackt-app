@@ -4,8 +4,8 @@ import { storiesOf } from '@kadira/storybook';
 // Siblings.
 import Textarea from './';
 
-// Config.
-import { lorem, renderControlStories } from '../../../../.storybook/config';
+// Utilities.
+import { lorem, renderControlStories } from '../../../../.storybook/utils';
 
 //--------------------------------------------------------------------------------------------------
 

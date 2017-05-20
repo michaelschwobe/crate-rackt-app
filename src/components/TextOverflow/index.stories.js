@@ -4,8 +4,8 @@ import { storiesOf } from '@kadira/storybook';
 // Siblings.
 import TextOverflow from './';
 
-// Config.
-import { lorem } from '../../../.storybook/config';
+// Utilities.
+import { lorem } from '../../../.storybook/utils';
 
 //--------------------------------------------------------------------------------------------------
 

@@ -4,8 +4,8 @@ import { storiesOf } from '@kadira/storybook';
 // Siblings.
 import Label from './';
 
-// Config.
-import { lorem } from '../../../.storybook/config';
+// Utilities.
+import { lorem } from '../../../.storybook/utils';
 
 const text = lorem.substring(0, 17);
 

@@ -4,8 +4,8 @@ import { storiesOf } from '@kadira/storybook';
 // Siblings.
 import Select from './';
 
-// Config.
-import { optionsArr, optionsObj, renderControlStories } from '../../../../.storybook/config';
+// Utilities.
+import { optionsArr, optionsObj, renderControlStories } from '../../../../.storybook/utils';
 
 //--------------------------------------------------------------------------------------------------
 

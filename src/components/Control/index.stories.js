@@ -4,8 +4,8 @@ import { storiesOf } from '@kadira/storybook';
 // Siblings.
 import Control, { types } from './';
 
-// Config.
-import { setControlProps, renderControlStories } from '../../../.storybook/config';
+// Utilities.
+import { setControlProps, renderControlStories } from '../../../.storybook/utils';
 
 //--------------------------------------------------------------------------------------------------
 
