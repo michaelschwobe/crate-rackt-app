@@ -9,7 +9,7 @@ import styles from './index.css';
 //--------------------------------------------------------------------------------------------------
 
 const Nav = ({ className, ...props }) => (
-  <nav className={classNames(styles.root, className)} {...props} role="navigation">
+  <nav className={classNames(styles.root, className)} {...props}>
 
     <h1 className={styles.heading}>Menu</h1>
 
