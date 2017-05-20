@@ -1,5 +1,5 @@
 # node_modules are ignored by default
 
-.storybook
-public
-build
+/.storybook
+/public
+/build
