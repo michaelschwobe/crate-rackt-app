@@ -8,7 +8,7 @@ const RoutePublic = ({ component: Component, authed, redirectTo, ...otherProps }
   <Route
     {...otherProps}
     render={props =>
-      (authed === false ? <Component {...props} /> : <Redirect to={redirectTo || '/'} />)}
+      authed === false ? <Component {...props} /> : <Redirect to={redirectTo || '/'} />}
   />
 );
 

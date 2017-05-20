@@ -7,6 +7,7 @@ import styles from './index.css';
 
 //--------------------------------------------------------------------------------------------------
 
+/* eslint-disable max-len */
 /**
  * Single path coordinates for {@link Icon} from {@link http://iconmonstr.com iconmonstr}
  *
@@ -23,6 +24,7 @@ export const icons = {
   triangleLeft: 'M3.5 12 L18.5 3 L18.5 21z',
   triangleRight: 'M5.5 3 L20.5 12 L5.5 21z',
 };
+/* eslint-enable max-len */
 
 //--------------------------------------------------------------------------------------------------
 

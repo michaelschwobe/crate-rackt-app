@@ -8,10 +8,14 @@ const RoutePrivate = ({ component: Component, authed, ...otherProps }) => (
   <Route
     {...otherProps}
     render={props =>
-      (authed === true
+      authed === true
         ? <Component {...props} />
-        : <Redirect to={{ pathname: '/login', state: { from: props.location } }} />) // eslint-disable-line react/prop-types
-    }
+        : <Redirect
+            to={{
+              pathname: '/login',
+              state: { from: props.location }, // eslint-disable-line react/prop-types
+            }}
+          />}
   />
 );
 
