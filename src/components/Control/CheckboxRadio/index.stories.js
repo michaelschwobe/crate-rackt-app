@@ -1,18 +1,22 @@
 import React from 'react';
-import { storiesOf } from '@kadira/storybook';
+import { storiesOf } from '@storybook/react';
 
 // Siblings.
 import CheckboxRadio from './';
 
 // Utilities.
-import { lorem, setControlProps, renderControlStories } from '../../../../.storybook/utils';
+import {
+  lorem,
+  setControlProps,
+  renderControlStories,
+} from '../../../../.storybook/utils';
 
 const types = ['checkbox', 'radio'];
 
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
-storiesOf('CheckboxRadio', module)
-  .add('default', () => (
+storiesOf('Control/CheckboxRadio', module)
+  .add('default', () =>
     <div>
       {types.map(type => {
         const otherProps = setControlProps(type, false);
@@ -20,9 +24,9 @@ storiesOf('CheckboxRadio', module)
         otherProps.text = lorem.substring(0, 11);
         return renderControlStories(CheckboxRadio, type, otherProps);
       })}
-    </div>
-  ))
-  .add('defaultChecked', () => (
+    </div>,
+  )
+  .add('defaultChecked', () =>
     <div>
       {types.map(type => {
         const otherProps = setControlProps(type, false);
@@ -31,9 +35,9 @@ storiesOf('CheckboxRadio', module)
         otherProps.defaultChecked = true;
         return renderControlStories(CheckboxRadio, type, otherProps);
       })}
-    </div>
-  ))
-  .add('reverse', () => (
+    </div>,
+  )
+  .add('reverse', () =>
     <div>
       {types.map(type => {
         const otherProps = setControlProps(type, false);
@@ -42,9 +46,9 @@ storiesOf('CheckboxRadio', module)
         otherProps.reverse = true;
         return renderControlStories(CheckboxRadio, type, otherProps);
       })}
-    </div>
-  ))
-  .add('wide', () => (
+    </div>,
+  )
+  .add('wide', () =>
     <div>
       {types.map(type => {
         const otherProps = setControlProps(type, false);
@@ -53,9 +57,9 @@ storiesOf('CheckboxRadio', module)
         otherProps.wide = true;
         return renderControlStories(CheckboxRadio, type, otherProps);
       })}
-    </div>
-  ))
-  .add('mixed', () => (
+    </div>,
+  )
+  .add('mixed', () =>
     <div>
       {types.map(type => {
         const otherProps = setControlProps(type, true);
@@ -66,5 +70,5 @@ storiesOf('CheckboxRadio', module)
         otherProps.required = true;
         return renderControlStories(CheckboxRadio, type, otherProps);
       })}
-    </div>
-  ));
+    </div>,
+  );

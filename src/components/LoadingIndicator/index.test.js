@@ -5,7 +5,7 @@ import { render } from 'react-dom';
 // Siblings.
 import LoadingIndicator from './';
 
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 describe('<LoadingIndicator />', () => {
   it('should render without crashing', () => {

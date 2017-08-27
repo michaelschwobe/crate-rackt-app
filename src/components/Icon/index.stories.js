@@ -1,23 +1,23 @@
 import React from 'react';
-import { storiesOf } from '@kadira/storybook';
+import { storiesOf } from '@storybook/react';
 
 // Siblings.
 import Icon, { icons } from './';
 
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 storiesOf('Icon', module)
-  .add('default', () => (
+  .add('default', () =>
     <div>
       {Object.keys(icons).map(icon => <Icon key={icon} type={icon} />)}
-    </div>
-  ))
-  .add('currentColor', () => (
+    </div>,
+  )
+  .add('currentColor', () =>
     <div style={{ color: 'green' }}>
       {Object.keys(icons).map(icon => <Icon key={icon} type={icon} />)}
-    </div>
-  ))
-  .add('vertical alignment', () => (
+    </div>,
+  )
+  .add('vertical alignment', () =>
     <div>
       <div style={{ fontSize: '1em' }}>
         X{Object.keys(icons).map(icon => <Icon key={icon} type={icon} />)}X
@@ -31,5 +31,5 @@ storiesOf('Icon', module)
       <div style={{ fontSize: '8em' }}>
         X{Object.keys(icons).map(icon => <Icon key={icon} type={icon} />)}X
       </div>
-    </div>
-  ));
+    </div>,
+  );

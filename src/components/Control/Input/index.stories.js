@@ -1,25 +1,28 @@
 import React from 'react';
-import { storiesOf } from '@kadira/storybook';
+import { storiesOf } from '@storybook/react';
 
 // Siblings.
 import Input, { types } from './';
 
 // Utilities.
-import { setControlProps, renderControlStories } from '../../../../.storybook/utils';
+import {
+  setControlProps,
+  renderControlStories,
+} from '../../../../.storybook/utils';
 
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
-storiesOf('Input', module)
-  .add('default', () => (
+storiesOf('Control/Input', module)
+  .add('default', () =>
     <div>
       {types.map(type => {
         const otherProps = setControlProps(type, false);
         otherProps.type = type;
         return renderControlStories(Input, type, otherProps);
       })}
-    </div>
-  ))
-  .add('wide', () => (
+    </div>,
+  )
+  .add('wide', () =>
     <div>
       {types.map(type => {
         const otherProps = setControlProps(type, false);
@@ -27,9 +30,9 @@ storiesOf('Input', module)
         otherProps.wide = true;
         return renderControlStories(Input, type, otherProps);
       })}
-    </div>
-  ))
-  .add('mixed', () => (
+    </div>,
+  )
+  .add('mixed', () =>
     <div>
       {types.map(type => {
         const otherProps = setControlProps(type, true);
@@ -38,5 +41,5 @@ storiesOf('Input', module)
         otherProps.required = true;
         return renderControlStories(Input, type, otherProps);
       })}
-    </div>
-  ));
+    </div>,
+  );

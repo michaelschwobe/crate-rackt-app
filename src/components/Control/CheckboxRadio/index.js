@@ -8,11 +8,11 @@ import { slugify } from '../../../utils';
 // Siblings.
 import styles from './index.css';
 
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 export const types = ['checkbox', 'radio'];
 
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 const CheckboxRadio = ({
   className,
@@ -42,7 +42,11 @@ const CheckboxRadio = ({
     className,
   );
   const classesInput = styles.input;
-  const classesControl = classNames(styles.control, styles[`${type}-control`], classNameControl);
+  const classesControl = classNames(
+    styles.control,
+    styles[`${type}-control`],
+    classNameControl,
+  );
   const classesLabel = classNames(styles.text, classNameLabel);
 
   const nameSlug = slugify(name);
@@ -58,10 +62,8 @@ const CheckboxRadio = ({
         required={required}
         disabled={disabled || readOnly}
         {...otherProps}
-      />
-      {' '}
-      <span className={classesControl} />
-      {' '}
+      />{' '}
+      <span className={classesControl} />{' '}
       <span className={classesLabel}>{text}</span>
     </label>
   );

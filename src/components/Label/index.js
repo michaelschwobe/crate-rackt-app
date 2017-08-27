@@ -8,9 +8,17 @@ import { slugify } from '../../utils';
 // Siblings.
 import styles from './index.css';
 
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
-const Label = ({ className, htmlFor, text, isRequired, isDescription, isError, ...otherProps }) => {
+const Label = ({
+  className,
+  htmlFor,
+  text,
+  isRequired,
+  isDescription,
+  isError,
+  ...otherProps
+}) => {
   const classes = classNames(
     styles.root,
     {
@@ -26,7 +34,8 @@ const Label = ({ className, htmlFor, text, isRequired, isDescription, isError, .
 
   return (
     <label className={classes} htmlFor={htmlForSlug} {...otherProps}>
-      {labelText}{!!isRequired && <span className={styles.required}>*</span>}
+      {labelText}
+      {!!isRequired && <span className={styles.required}>*</span>}
     </label>
   );
 };

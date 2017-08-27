@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@kadira/storybook';
+import { storiesOf } from '@storybook/react';
 
 // Siblings.
 import LoadingWrapper from './';
@@ -7,26 +7,29 @@ import LoadingWrapper from './';
 // Utilities.
 import { lorem } from '../../../.storybook/utils';
 
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
-const Child = () => <div style={{ color: '#666' }}>{lorem} {lorem}</div>;
+const Child = () =>
+  <div style={{ color: '#666' }}>
+    {lorem} {lorem}
+  </div>;
 
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 storiesOf('LoadingWrapper', module)
-  .add('default', () => (
+  .add('default', () =>
     <LoadingWrapper>
       <Child />
-    </LoadingWrapper>
-  ))
-  .add('loading', () => (
+    </LoadingWrapper>,
+  )
+  .add('loading', () =>
     <div>
       <LoadingWrapper loading>
         <Child />
       </LoadingWrapper>
-    </div>
-  ))
-  .add('overlay', () => (
+    </div>,
+  )
+  .add('overlay', () =>
     <div>
       <LoadingWrapper loading overlay>
         <Child />
@@ -36,5 +39,5 @@ storiesOf('LoadingWrapper', module)
           <Child />
         </LoadingWrapper>
       </div>
-    </div>
-  ));
+    </div>,
+  );

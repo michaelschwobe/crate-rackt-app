@@ -8,9 +8,18 @@ import LoadingIndicator from '../LoadingIndicator';
 // Siblings.
 import styles from './index.css';
 
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
-const LoadingWrapper = ({ children, className, loading, overlay, block, inverse, size, speed }) => {
+const LoadingWrapper = ({
+  children,
+  className,
+  loading,
+  overlay,
+  block,
+  inverse,
+  size,
+  speed,
+}) => {
   // Is NOT loading, display children.
   if (!loading) {
     return Children.only(children);
@@ -24,13 +33,16 @@ const LoadingWrapper = ({ children, className, loading, overlay, block, inverse,
           [styles.inverse]: inverse,
         })}
       >
-
         {Children.only(children)}
 
         <div className={styles.overlay}>
-          <LoadingIndicator block={block} inverse={inverse} size={size} speed={speed} />
+          <LoadingIndicator
+            block={block}
+            inverse={inverse}
+            size={size}
+            speed={speed}
+          />
         </div>
-
       </div>
     );
   }

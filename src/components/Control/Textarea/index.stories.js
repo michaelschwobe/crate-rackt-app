@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@kadira/storybook';
+import { storiesOf } from '@storybook/react';
 
 // Siblings.
 import Textarea from './';
@@ -7,22 +7,22 @@ import Textarea from './';
 // Utilities.
 import { lorem, renderControlStories } from '../../../../.storybook/utils';
 
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
-storiesOf('Textarea', module)
-  .add('default', () => (
+storiesOf('Control/Textarea', module)
+  .add('default', () =>
     <div>
       {renderControlStories(Textarea, 'textarea', null)}
-    </div>
-  ))
-  .add('wide', () => (
+    </div>,
+  )
+  .add('wide', () =>
     <div>
       {renderControlStories(Textarea, 'textarea', {
         wide: true,
       })}
-    </div>
-  ))
-  .add('mixed', () => (
+    </div>,
+  )
+  .add('mixed', () =>
     <div>
       {renderControlStories(Textarea, 'textarea', {
         className: 'example',
@@ -31,5 +31,5 @@ storiesOf('Textarea', module)
         defaultValue: lorem,
         required: true,
       })}
-    </div>
-  ));
+    </div>,
+  );

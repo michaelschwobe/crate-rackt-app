@@ -9,7 +9,7 @@ import Icon, { icons } from '../../components/Icon';
 // Siblings.
 import styles from './index.css';
 
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 const Button = ({
   className,
@@ -28,7 +28,9 @@ const Button = ({
 }) => {
   // Throw an error to guarantee we never render an empty button.
   if (!text === !children) {
-    throw new Error('Failed prop type: Component must contain either `text` or `children`.');
+    throw new Error(
+      'Failed prop type: Component must contain either `text` or `children`.',
+    );
   }
 
   // CSS Classes.
@@ -40,8 +42,18 @@ const Button = ({
     [styles.iconAndText]: (iconBefore && !iconOnly) || (iconAfter && !iconOnly),
     [styles.iconOnly]: !!iconOnly,
   };
-  const classesButton = classNames(styles.root, styles.button, className, classes);
-  const classesAnchor = classNames(styles.root, styles.anchor, className, classes);
+  const classesButton = classNames(
+    styles.root,
+    styles.button,
+    className,
+    classes,
+  );
+  const classesAnchor = classNames(
+    styles.root,
+    styles.anchor,
+    className,
+    classes,
+  );
 
   // Assign a 'title' attribute if...
   // 1. Its empty.
@@ -56,7 +68,9 @@ const Button = ({
   const renderChildren = (
     <span className={styles.wrapper}>
       {!!iconBefore && <Icon className={styles.iconBefore} type={iconBefore} />}
-      <span className={styles.content}>{text || children}</span>
+      <span className={styles.content}>
+        {text || children}
+      </span>
       {!!iconAfter && <Icon className={styles.iconAfter} type={iconAfter} />}
     </span>
   );

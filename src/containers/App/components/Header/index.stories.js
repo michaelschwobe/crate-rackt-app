@@ -1,16 +1,16 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import { storiesOf } from '@kadira/storybook';
+import { storiesOf } from '@storybook/react';
 
 // Siblings.
 import Header from './';
 
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 storiesOf('Header', module)
-  .addDecorator(story => (
+  .addDecorator(story =>
     <MemoryRouter>
       {story()}
-    </MemoryRouter>
-  ))
+    </MemoryRouter>,
+  )
   .add('default', () => <Header />);
