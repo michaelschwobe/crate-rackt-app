@@ -6,15 +6,14 @@ import { MemoryRouter } from 'react-router-dom';
 // Siblings.
 import Header from './';
 
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
-const HeaderWithContext = props => (
+const HeaderWithContext = props =>
   <MemoryRouter>
     <Header {...props} />
-  </MemoryRouter>
-);
+  </MemoryRouter>;
 
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 describe('<Header />', () => {
   it('should render without crashing', () => {

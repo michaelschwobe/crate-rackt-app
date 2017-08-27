@@ -8,7 +8,7 @@ import { slugify } from '../../../utils';
 // Siblings.
 import styles from './index.css';
 
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 const Select = ({
   className,
@@ -45,12 +45,22 @@ const Select = ({
       disabled={disabled || readOnly}
       {...otherProps}
     >
-      <option value="">{placeholder != null ? placeholder : ' '}</option>
+      <option value="">
+        {placeholder != null ? placeholder : ' '}
+      </option>
       {options.map(option => {
         if (typeof option === 'object') {
-          return <option key={option.id} value={option.id}>{option.text}</option>;
+          return (
+            <option key={option.id} value={option.id}>
+              {option.text}
+            </option>
+          );
         }
-        return <option key={option} value={option}>{option}</option>;
+        return (
+          <option key={option} value={option}>
+            {option}
+          </option>
+        );
       })}
     </select>
   );
@@ -62,7 +72,9 @@ Select.propTypes = {
   name: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
   options: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),
+    PropTypes.arrayOf(
+      PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    ),
     PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),

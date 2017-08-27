@@ -5,11 +5,15 @@ import classNames from 'classnames';
 // Siblings.
 import styles from './index.css';
 
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
-const TextOverflow = ({ className, width, style, text }) => (
-  <span className={classNames(styles.root, className)} style={{ width, ...style }}>{text}</span>
-);
+const TextOverflow = ({ className, width, style, text }) =>
+  <span
+    className={classNames(styles.root, className)}
+    style={{ width, ...style }}
+  >
+    {text}
+  </span>;
 
 TextOverflow.propTypes = {
   className: PropTypes.string,

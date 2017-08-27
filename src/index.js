@@ -1,13 +1,20 @@
 import React from 'react';
 import { render } from 'react-dom';
-import 'sanitize.css/sanitize.css';
+
+// Styles (global).
+import 'sanitize.css';
+import './index.css';
+
+// Utils.
+import './utils/polyfills';
+import registerServiceWorker from './utils/registerServiceWorker';
 
 // Containers.
 import App from './containers/App';
 
-// Siblings.
-import './index.css';
-
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 render(<App />, document.getElementById('root'));
+
+// Init local cache / offline capability.
+registerServiceWorker();

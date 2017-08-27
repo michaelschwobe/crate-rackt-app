@@ -6,33 +6,43 @@ import classNames from 'classnames';
 // Siblings.
 import styles from './index.css';
 
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
-const Nav = ({ className, ...props }) => (
+const Nav = ({ className, ...props }) =>
   <nav className={classNames(styles.root, className)} {...props}>
-
     <h1 className={styles.heading}>Menu</h1>
 
     <ul className={styles.menu}>
       <li className={styles.item}>
-        <NavLink className={styles.link} activeClassName={styles.active} to="/" exact>
+        <NavLink
+          className={styles.link}
+          activeClassName={styles.active}
+          to="/"
+          exact
+        >
           Home
         </NavLink>
       </li>
       <li className={styles.item}>
-        <NavLink className={styles.link} activeClassName={styles.active} to="/about">
+        <NavLink
+          className={styles.link}
+          activeClassName={styles.active}
+          to="/about"
+        >
           About
         </NavLink>
       </li>
       <li className={styles.item}>
-        <NavLink className={styles.link} activeClassName={styles.active} to="/example">
+        <NavLink
+          className={styles.link}
+          activeClassName={styles.active}
+          to="/example"
+        >
           NoMatch
         </NavLink>
       </li>
     </ul>
-
-  </nav>
-);
+  </nav>;
 
 Nav.propTypes = {
   className: PropTypes.string,

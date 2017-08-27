@@ -13,13 +13,11 @@ import PageNoMatch from '../../pages/PageNoMatch';
 // Siblings.
 import styles from './index.css';
 
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
-const App = () => (
+const App = () =>
   <Router>
-
     <div className={styles.root}>
-
       <Header className={styles.header} />
 
       <main className={styles.main} role="main">
@@ -31,10 +29,7 @@ const App = () => (
       </main>
 
       <Footer className={styles.footer} />
-
     </div>
-
-  </Router>
-);
+  </Router>;
 
 export default App;

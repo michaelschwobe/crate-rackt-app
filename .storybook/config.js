@@ -1,10 +1,12 @@
-import { configure } from '@kadira/storybook';
+/* eslint-disable import/no-extraneous-dependencies */
 
-// Styles: reset.
-import 'sanitize.css/sanitize.css';
+import { configure } from '@storybook/react';
 
-// Styles: global.
+// Styles (global).
+import 'sanitize.css';
 import '../src/index.css';
+
+//------------------------------------------------------------------------------
 
 const req = require.context('../src', true, /stories\.js$/);
 

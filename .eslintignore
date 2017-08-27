@@ -1,5 +1,11 @@
 # node_modules are ignored by default
 
+# development
+/src/utils/registerServiceWorker.js
+
+# production
 /.storybook
-/public
 /build
+/dist
+/public
+/storybook-static

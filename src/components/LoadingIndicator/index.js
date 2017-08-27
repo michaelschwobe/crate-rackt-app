@@ -5,7 +5,7 @@ import classNames from 'classnames';
 // Siblings.
 import styles from './index.css';
 
-//--------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
 const LoadingIndicator = ({ className, block, inverse, size, speed }) => {
   const style = {};
@@ -25,9 +25,7 @@ const LoadingIndicator = ({ className, block, inverse, size, speed }) => {
 
   return (
     <span className={classNameRoot} style={style}>
-
       <span className={styles.text}>Loading…</span>
-
     </span>
   );
 };
