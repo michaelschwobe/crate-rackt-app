@@ -8,7 +8,7 @@
   "bugs": {
     "url": "https://github.com/michaelschwobe/crate-rackt-app/issues"
   },
-  "homepage": "https://github.com/michaelschwobe/crate-rackt-app#readme",
+  "homepage": ".",
   "keywords": [
     "airbnb",
     "babel",
@@ -29,11 +29,12 @@
     "build": "react-scripts build",
     "prezip": "mkdir -p dist; npm run build",
     "zip": "cd build; zip -r -X '../dist/YYYYMMDD-crate-rackt-app-0.2.0.zip' *; cd ../",
-    "start-stories": "start-storybook -p 6006",
+    "start-stories": "start-storybook -p 9009",
     "build-stories": "build-storybook",
     "prezip-stories": "mkdir -p dist; npm run build-stories",
     "zip-stories": "cd storybook-static; zip -r -X '../dist/YYYYMMDD-crate-rackt-app-stories-0.2.0.zip' *; cd ../",
-    "lint": "eslint src --ext .json --ext .js",
+    "lint": "eslint '.storybook/**/*.{js,json}' 'src/**/*.{js,json}'",
+    "lint-fix": "eslint '.storybook/**/*.{js,json}' 'src/**/*.{js,json}' --fix",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
