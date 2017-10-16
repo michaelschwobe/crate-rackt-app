@@ -7,13 +7,14 @@ import styles from './index.css';
 
 //------------------------------------------------------------------------------
 
-const TextOverflow = ({ className, width, style, text }) =>
+const TextOverflow = ({ className, width, style, text }) => (
   <span
     className={classNames(styles.root, className)}
     style={{ width, ...style }}
   >
     {text}
-  </span>;
+  </span>
+);
 
 TextOverflow.propTypes = {
   className: PropTypes.string,

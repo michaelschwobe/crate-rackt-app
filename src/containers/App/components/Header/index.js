@@ -10,10 +10,11 @@ import styles from './index.css';
 
 //------------------------------------------------------------------------------
 
-const Header = ({ className }) =>
+const Header = ({ className }) => (
   <header className={classNames(styles.root, className)} role="banner">
     <Nav className={styles.nav} />
-  </header>;
+  </header>
+);
 
 Header.propTypes = {
   className: PropTypes.string,

@@ -9,10 +9,11 @@ import Button from './';
 
 //------------------------------------------------------------------------------
 
-const ButtonWithContext = props =>
+const ButtonWithContext = props => (
   <MemoryRouter>
     <Button {...props} />
-  </MemoryRouter>;
+  </MemoryRouter>
+);
 
 //------------------------------------------------------------------------------
 

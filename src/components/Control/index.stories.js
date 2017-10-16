@@ -12,12 +12,12 @@ import {
 
 //------------------------------------------------------------------------------
 
-storiesOf('Control/Control', module).add('default', () =>
+storiesOf('Control/Control', module).add('default', () => (
   <div>
     {types.map(type => {
       const otherProps = setControlProps(type, false);
       otherProps.type = type;
       return renderControlStories(Control, type, otherProps);
     })}
-  </div>,
-);
+  </div>
+));

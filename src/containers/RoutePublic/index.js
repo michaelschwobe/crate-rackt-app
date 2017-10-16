@@ -9,14 +9,17 @@ const RoutePublic = ({
   authed,
   redirectTo,
   ...otherProps
-}) =>
+}) => (
   <Route
     {...otherProps}
     render={props =>
-      authed === false
-        ? <Component {...props} />
-        : <Redirect to={redirectTo || '/'} />}
-  />;
+      authed === false ? (
+        <Component {...props} />
+      ) : (
+        <Redirect to={redirectTo || '/'} />
+      )}
+  />
+);
 
 RoutePublic.propTypes = {
   component: PropTypes.func.isRequired,

@@ -16,7 +16,7 @@ const types = ['checkbox', 'radio'];
 //------------------------------------------------------------------------------
 
 storiesOf('Control/CheckboxRadio', module)
-  .add('default', () =>
+  .add('default', () => (
     <div>
       {types.map(type => {
         const otherProps = setControlProps(type, false);
@@ -24,9 +24,9 @@ storiesOf('Control/CheckboxRadio', module)
         otherProps.text = lorem.substring(0, 11);
         return renderControlStories(CheckboxRadio, type, otherProps);
       })}
-    </div>,
-  )
-  .add('defaultChecked', () =>
+    </div>
+  ))
+  .add('defaultChecked', () => (
     <div>
       {types.map(type => {
         const otherProps = setControlProps(type, false);
@@ -35,9 +35,9 @@ storiesOf('Control/CheckboxRadio', module)
         otherProps.defaultChecked = true;
         return renderControlStories(CheckboxRadio, type, otherProps);
       })}
-    </div>,
-  )
-  .add('reverse', () =>
+    </div>
+  ))
+  .add('reverse', () => (
     <div>
       {types.map(type => {
         const otherProps = setControlProps(type, false);
@@ -46,9 +46,9 @@ storiesOf('Control/CheckboxRadio', module)
         otherProps.reverse = true;
         return renderControlStories(CheckboxRadio, type, otherProps);
       })}
-    </div>,
-  )
-  .add('wide', () =>
+    </div>
+  ))
+  .add('wide', () => (
     <div>
       {types.map(type => {
         const otherProps = setControlProps(type, false);
@@ -57,9 +57,9 @@ storiesOf('Control/CheckboxRadio', module)
         otherProps.wide = true;
         return renderControlStories(CheckboxRadio, type, otherProps);
       })}
-    </div>,
-  )
-  .add('mixed', () =>
+    </div>
+  ))
+  .add('mixed', () => (
     <div>
       {types.map(type => {
         const otherProps = setControlProps(type, true);
@@ -70,5 +70,5 @@ storiesOf('Control/CheckboxRadio', module)
         otherProps.required = true;
         return renderControlStories(CheckboxRadio, type, otherProps);
       })}
-    </div>,
-  );
+    </div>
+  ));

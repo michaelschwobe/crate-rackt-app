@@ -8,7 +8,7 @@ import styles from './index.css';
 
 //------------------------------------------------------------------------------
 
-const Nav = ({ className, ...props }) =>
+const Nav = ({ className, ...props }) => (
   <nav className={classNames(styles.root, className)} {...props}>
     <h1 className={styles.heading}>Menu</h1>
 
@@ -42,7 +42,8 @@ const Nav = ({ className, ...props }) =>
         </NavLink>
       </li>
     </ul>
-  </nav>;
+  </nav>
+);
 
 Nav.propTypes = {
   className: PropTypes.string,

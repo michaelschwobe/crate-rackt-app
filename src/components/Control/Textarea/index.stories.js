@@ -10,19 +10,17 @@ import { lorem, renderControlStories } from '../../../../.storybook/utils';
 //------------------------------------------------------------------------------
 
 storiesOf('Control/Textarea', module)
-  .add('default', () =>
-    <div>
-      {renderControlStories(Textarea, 'textarea', null)}
-    </div>,
-  )
-  .add('wide', () =>
+  .add('default', () => (
+    <div>{renderControlStories(Textarea, 'textarea', null)}</div>
+  ))
+  .add('wide', () => (
     <div>
       {renderControlStories(Textarea, 'textarea', {
         wide: true,
       })}
-    </div>,
-  )
-  .add('mixed', () =>
+    </div>
+  ))
+  .add('mixed', () => (
     <div>
       {renderControlStories(Textarea, 'textarea', {
         className: 'example',
@@ -31,5 +29,5 @@ storiesOf('Control/Textarea', module)
         defaultValue: lorem,
         required: true,
       })}
-    </div>,
-  );
+    </div>
+  ));

@@ -8,10 +8,11 @@ import Header from './';
 
 //------------------------------------------------------------------------------
 
-const HeaderWithContext = props =>
+const HeaderWithContext = props => (
   <MemoryRouter>
     <Header {...props} />
-  </MemoryRouter>;
+  </MemoryRouter>
+);
 
 //------------------------------------------------------------------------------
 

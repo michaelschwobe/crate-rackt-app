@@ -8,12 +8,8 @@ import Button from './';
 //------------------------------------------------------------------------------
 
 storiesOf('Button', module)
-  .addDecorator(story =>
-    <MemoryRouter>
-      {story()}
-    </MemoryRouter>,
-  )
-  .add('default', () =>
+  .addDecorator(story => <MemoryRouter>{story()}</MemoryRouter>)
+  .add('default', () => (
     <div>
       <div>
         <Button text="Example" /> ← text as props.text, button
@@ -54,9 +50,9 @@ storiesOf('Button', module)
         </Button>{' '}
         ← text as children, link
       </div>
-    </div>,
-  )
-  .add('theme', () =>
+    </div>
+  ))
+  .add('theme', () => (
     <div>
       <div>
         <Button theme="primary" text="Example" /> ← primary, button
@@ -189,9 +185,9 @@ storiesOf('Button', module)
       <div>
         <Button theme="info" type="link" href="/" text="Example" /> ← info, link
       </div>
-    </div>,
-  )
-  .add('rounded', () =>
+    </div>
+  ))
+  .add('rounded', () => (
     <div>
       <div>
         <Button rounded theme="primary" text="Example" /> ← rounded, button
@@ -218,9 +214,9 @@ storiesOf('Button', module)
         <Button rounded theme="primary" type="link" href="/" text="Example" /> ←
         rounded, link
       </div>
-    </div>,
-  )
-  .add('wide', () =>
+    </div>
+  ))
+  .add('wide', () => (
     <div>
       <div>
         <Button wide theme="primary" text="Example" /> ↑ wide, button
@@ -241,9 +237,9 @@ storiesOf('Button', module)
         <Button wide theme="primary" type="link" href="/" text="Example" /> ↑
         wide, link
       </div>
-    </div>,
-  )
-  .add('padded', () =>
+    </div>
+  ))
+  .add('padded', () => (
     <div>
       <div>
         <Button padded theme="primary" text="Example" /> ← padded, button
@@ -279,9 +275,9 @@ storiesOf('Button', module)
         <Button padded theme="primary" type="link" href="/" text="Example" /> ←
         Vertical alignment
       </div>
-    </div>,
-  )
-  .add('icons', () =>
+    </div>
+  ))
+  .add('icons', () => (
     <div>
       <div>
         <Button iconBefore="arrowRight" text="Example" /> ← iconBefore, text as
@@ -607,9 +603,9 @@ storiesOf('Button', module)
         />{' '}
         ← iconOnly, both icons, text as props.text, link
       </div>
-    </div>,
-  )
-  .add('mixed', () =>
+    </div>
+  ))
+  .add('mixed', () => (
     <div>
       <div>
         <Button
@@ -717,5 +713,5 @@ storiesOf('Button', module)
         />{' '}
         ← text as props.text, link
       </div>
-    </div>,
-  );
+    </div>
+  ));

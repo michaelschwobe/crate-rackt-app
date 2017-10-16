@@ -9,27 +9,28 @@ import { lorem } from '../../../.storybook/utils';
 
 //------------------------------------------------------------------------------
 
-const Child = () =>
+const Child = () => (
   <div style={{ color: '#666' }}>
     {lorem} {lorem}
-  </div>;
+  </div>
+);
 
 //------------------------------------------------------------------------------
 
 storiesOf('LoadingWrapper', module)
-  .add('default', () =>
+  .add('default', () => (
     <LoadingWrapper>
       <Child />
-    </LoadingWrapper>,
-  )
-  .add('loading', () =>
+    </LoadingWrapper>
+  ))
+  .add('loading', () => (
     <div>
       <LoadingWrapper loading>
         <Child />
       </LoadingWrapper>
-    </div>,
-  )
-  .add('overlay', () =>
+    </div>
+  ))
+  .add('overlay', () => (
     <div>
       <LoadingWrapper loading overlay>
         <Child />
@@ -39,5 +40,5 @@ storiesOf('LoadingWrapper', module)
           <Child />
         </LoadingWrapper>
       </div>
-    </div>,
-  );
+    </div>
+  ));

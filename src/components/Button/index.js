@@ -68,9 +68,7 @@ const Button = ({
   const renderChildren = (
     <span className={styles.wrapper}>
       {!!iconBefore && <Icon className={styles.iconBefore} type={iconBefore} />}
-      <span className={styles.content}>
-        {text || children}
-      </span>
+      <span className={styles.content}>{text || children}</span>
       {!!iconAfter && <Icon className={styles.iconAfter} type={iconAfter} />}
     </span>
   );

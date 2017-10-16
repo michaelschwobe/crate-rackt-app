@@ -29,7 +29,7 @@ export const icons = {
 
 //------------------------------------------------------------------------------
 
-const Icon = ({ className, type, ...props }) =>
+const Icon = ({ className, type, ...props }) => (
   <svg
     className={classNames(styles.root, className, [styles[type]])}
     width="24"
@@ -40,7 +40,8 @@ const Icon = ({ className, type, ...props }) =>
     {...props}
   >
     <path d={icons[type]} />
-  </svg>;
+  </svg>
+);
 
 Icon.propTypes = {
   className: PropTypes.string,

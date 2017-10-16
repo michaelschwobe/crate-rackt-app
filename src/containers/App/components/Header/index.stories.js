@@ -8,9 +8,5 @@ import Header from './';
 //------------------------------------------------------------------------------
 
 storiesOf('Header', module)
-  .addDecorator(story =>
-    <MemoryRouter>
-      {story()}
-    </MemoryRouter>,
-  )
+  .addDecorator(story => <MemoryRouter>{story()}</MemoryRouter>)
   .add('default', () => <Header />);

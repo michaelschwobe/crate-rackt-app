@@ -15,7 +15,7 @@ import styles from './index.css';
 
 //------------------------------------------------------------------------------
 
-const App = () =>
+const App = () => (
   <Router>
     <div className={styles.root}>
       <Header className={styles.header} />
@@ -30,6 +30,7 @@ const App = () =>
 
       <Footer className={styles.footer} />
     </div>
-  </Router>;
+  </Router>
+);
 
 export default App;

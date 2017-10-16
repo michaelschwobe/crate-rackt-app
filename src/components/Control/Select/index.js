@@ -45,9 +45,7 @@ const Select = ({
       disabled={disabled || readOnly}
       {...otherProps}
     >
-      <option value="">
-        {placeholder != null ? placeholder : ' '}
-      </option>
+      <option value="">{placeholder != null ? placeholder : ' '}</option>
       {options.map(option => {
         if (typeof option === 'object') {
           return (

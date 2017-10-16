@@ -13,16 +13,16 @@ import {
 //------------------------------------------------------------------------------
 
 storiesOf('Control/Input', module)
-  .add('default', () =>
+  .add('default', () => (
     <div>
       {types.map(type => {
         const otherProps = setControlProps(type, false);
         otherProps.type = type;
         return renderControlStories(Input, type, otherProps);
       })}
-    </div>,
-  )
-  .add('wide', () =>
+    </div>
+  ))
+  .add('wide', () => (
     <div>
       {types.map(type => {
         const otherProps = setControlProps(type, false);
@@ -30,9 +30,9 @@ storiesOf('Control/Input', module)
         otherProps.wide = true;
         return renderControlStories(Input, type, otherProps);
       })}
-    </div>,
-  )
-  .add('mixed', () =>
+    </div>
+  ))
+  .add('mixed', () => (
     <div>
       {types.map(type => {
         const otherProps = setControlProps(type, true);
@@ -41,5 +41,5 @@ storiesOf('Control/Input', module)
         otherProps.required = true;
         return renderControlStories(Input, type, otherProps);
       })}
-    </div>,
-  );
+    </div>
+  ));

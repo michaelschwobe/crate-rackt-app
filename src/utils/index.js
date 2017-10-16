@@ -9,7 +9,7 @@
  */
 export const refresh = () => {
   setTimeout(() => {
-    location.reload();
+    window.location.reload();
   }, 100);
 };
 

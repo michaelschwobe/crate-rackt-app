@@ -13,7 +13,7 @@ const text = lorem.substring(0, 17);
 
 //------------------------------------------------------------------------------
 
-storiesOf('Label', module).add('default', () =>
+storiesOf('Label', module).add('default', () => (
   <div>
     <div>
       <Label text={text} htmlFor="id" /> ← default
@@ -27,5 +27,5 @@ storiesOf('Label', module).add('default', () =>
     <div>
       <Label text={text} htmlFor="id" isError /> ← isError
     </div>
-  </div>,
-);
+  </div>
+));

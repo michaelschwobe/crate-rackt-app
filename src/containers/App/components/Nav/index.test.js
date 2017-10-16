@@ -8,10 +8,11 @@ import Nav from './';
 
 //------------------------------------------------------------------------------
 
-const NavWithContext = props =>
+const NavWithContext = props => (
   <MemoryRouter>
     <Nav {...props} />
-  </MemoryRouter>;
+  </MemoryRouter>
+);
 
 //------------------------------------------------------------------------------
 
