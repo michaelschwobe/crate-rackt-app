@@ -41,10 +41,10 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "core-js": "^2.5.0",
-    "custom-react-scripts": "0.2.0",
+    "custom-react-scripts": "^0.2.1",
     "prop-types": "^15.5.10",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "react-router-dom": "^4.2.2",
     "sanitize.css": "^5.0.0"
   },
@@ -52,14 +52,14 @@
     "@storybook/addon-actions": "^3.2.6",
     "@storybook/addon-links": "^3.2.6",
     "@storybook/react": "^3.2.8",
-    "eslint": "^3.19.0 || ^4.3.0",
-    "eslint-config-airbnb": "^15.1.0",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb": "^16.0.0",
     "eslint-config-prettier": "^2.3.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-json": "^1.2.0",
-    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-prettier": "^2.2.0",
-    "eslint-plugin-react": "^7.1.0",
+    "eslint-plugin-react": "^7.4.0",
     "prettier": "^1.5.3"
   }
 }
