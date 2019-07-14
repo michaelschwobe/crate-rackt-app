@@ -1,7 +1,0 @@
-.root {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: block;
-  overflow: hidden;
-  width: 100%;
-}

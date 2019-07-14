@@ -1,6 +1,0 @@
-.root {
-  position: relative;
-  top: -.09375em; /* affects icons in <Button> styles  */
-  width: 1em;
-  height: auto;
-}

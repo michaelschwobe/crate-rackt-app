@@ -1,31 +1,36 @@
-# See https://help.github.com/ignore-files/ for more about ignoring files.
+# For more about ignoring files, see:
+# https://help.github.com/ignore-files/
+# https://www.gitignore.io/
 
-# dependencies
+# Dependencies
 /node_modules
+/.pnp
+.pnp.js
 
-# testing
+# Testing
 /coverage
 
-# development
-/src/components/_Component
-/src/containers/_Container
-*.map
-
-# production
+# Production
 /build
 /storybook-static
 
-# distribution
-/dist
-*.zip
-
-# misc
-.DS_Store
+# Environments
 .env.local
-.env.development.local
 .env.test.local
+.env.development.local
 .env.production.local
 
+# Caches
+.eslintcache
+
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# IDEs
+.vscode
+*.sublime-*
+
+# Miscellaneous
+.DS_Store

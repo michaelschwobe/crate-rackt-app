@@ -1,39 +1,50 @@
 # crate-rackt-app
 
-> An opinionated, scalable create-react-app starting point configured with Airbnb linting, PostCSS modules, sanitize.css, and the Storybook UI development environment.
+An opinionated template/starting point was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and includes React Router, Storybook, Airbnb/ESLint/Prettier linting, prop-types, and classnames.
 
-## Development
+## Additional Scripts
 
-##### Required globally
+In the project directory, you can run:
 
-- [node/npm](https://nodejs.org)  
-- [yarn](https://yarnpkg.com)  
+### `yarn lint`
 
-##### Required locally
+Run the custom linter.
 
-- Create a `.env` file in the project root.  
-- Add the [configurations](https://github.com/kitze/custom-react-scripts#-configuration-options) needed.  
+### `yarn storybook`
 
-##### Command line scripts
+Run Storybook in development.
 
-- __Installation:__ `yarn`  
-- __Development:__ `yarn start`  
-- __Production:__ `yarn build`  
-- __Distribution:__ `yarn zip`  
-- __UI Development:__ `yarn start-stories`  
-- __UI Production:__ `yarn build-stories`  
-- __UI Distribution:__ `yarn zip-stories`  
-- __Linting:__ `yarn lint`  
-- __Testing:__ `yarn test`  
+### `yarn build-storybook`
 
-## Documentation
+Build Storybook for production.
 
-- [@storybook/react](https://github.com/storybooks/storybook) - Interactive development & testing environment for React, React-Native, Vue UI components.  
-- [classnames](https://www.npmjs.com/package/classnames) - Dynamically compose CSS classes.  
-- [core-js](https://www.npmjs.com/package/core-js) - Modular standard library for JavaScript. Includes polyfills.  
-- [create-react-app](https://www.npmjs.com/package/create-react-app)/[custom-react-scripts](https://www.npmjs.com/package/custom-react-scripts) - Create React apps with no build configuration.  
-- [eslint](https://www.npmjs.com/package/eslint)/[eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)/[eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)/[eslint-plugin-json](https://www.npmjs.com/package/eslint-plugin-json)/[eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)/[eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react) - JavaScript/JSX and JSON linting configuration.  
-- [prettier](https://www.npmjs.com/package/prettier)/[eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier)/[eslint-plugin-prettier](https://www.npmjs.com/package/eslint-plugin-prettier) - JavaScript/JSX/CSS formatting. Resolves Eslint and Prettier collisions.  
-- [prop-types](https://www.npmjs.com/package/prop-types) - Runtime type checking for React props and similar objects.  
-- [react-router-dom](https://github.com/ReactTraining/react-router) - Declarative routing for React.  
-- [sanitize.css](https://www.npmjs.com/package/sanitize.css) - Like Normalize.css, but preserves useful defaults.  
+## Learn More
+
+#### dependencies
+
+- [classnames](https://www.npmjs.com/package/classnames/)
+- [prop-types](https://www.npmjs.com/package/prop-types/)
+- [react](https://www.npmjs.com/package/react/)
+- [react-dom](https://www.npmjs.com/package/react-dom/)
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom/)
+- [react-scripts](https://www.npmjs.com/package/react-scripts/)
+
+#### devDependencies
+
+- [@babel/core](https://www.npmjs.com/package/@babel/core/)
+- [@storybook/addon-actions](https://www.npmjs.com/package/@storybook/addon-actions/)
+- [@storybook/addon-info](https://www.npmjs.com/package/@storybook/addon-info/)
+- [@storybook/addon-knobs](https://www.npmjs.com/package/@storybook/addon-knobs/)
+- [@storybook/addon-links](https://www.npmjs.com/package/@storybook/addon-links/)
+- [@storybook/addons](https://www.npmjs.com/package/@storybook/addons/)
+- [@storybook/react](https://www.npmjs.com/package/@storybook/react/)
+- [@storybook/theming](https://www.npmjs.com/package/@storybook/theming/)
+- [eslint](https://www.npmjs.com/package/eslint/)
+- [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb/)
+- [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier/)
+- [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import/)
+- [eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y/)
+- [eslint-plugin-prettier](https://www.npmjs.com/package/eslint-plugin-prettier/)
+- [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react/)
+- [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks/)
+- [prettier](https://www.npmjs.com/package/prettier/)

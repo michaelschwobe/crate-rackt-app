@@ -1,11 +1,12 @@
 # node_modules are ignored by default
 
-# development
-/src/utils/registerServiceWorker.js
+# Testing
+/coverage
 
-# production
-/.storybook
+# Development
+/src/serviceWorker.js
+
+# Production
 /build
-/dist
 /public
 /storybook-static
