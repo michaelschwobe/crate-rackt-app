@@ -1,14 +1,32 @@
-/* eslint-disable import/no-extraneous-dependencies */
+import { addDecorator, addParameters, configure } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
+import { create } from '@storybook/theming';
 
-import { configure } from '@storybook/react';
+// -----------------------------------------------------------------------------
 
-// Styles (global).
-import 'sanitize.css';
-import '../src/index.css';
+/**
+ * (Re-)configure Storybook UI at runtime.
+ * @link https://www.npmjs.com/package/@storybook/theming
+ */
+addParameters({
+  options: {
+    theme: create({
+      base: 'light',
+      brandTitle: 'crate-rackt-app',
+    }),
+    showPanel: true,
+    panelPosition: 'right',
+  },
+});
 
-//------------------------------------------------------------------------------
+/**
+ * Show additional information for your stories.
+ * @link https://www.npmjs.com/package/@storybook/addon-info
+ */
+addDecorator(withInfo);
 
-const req = require.context('../src', true, /stories\.js$/);
+// Automatically import all files ending in `*.stories.js` within `src/`.
+const req = require.context('../src', true, /\.stories\.js$/);
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));

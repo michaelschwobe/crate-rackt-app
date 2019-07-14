@@ -1,65 +1,60 @@
 {
   "name": "crate-rackt-app",
-  "version": "0.2.0",
-  "description": "An opinionated, scalable create-react-app starting point configured with Airbnb linting, PostCSS modules, sanitize.css, and the Storybook UI development environment.",
+  "description": "An opinionated create-react-app template/starting point",
+  "version": "0.3.0",
   "license": "MIT",
+  "private": true,
   "author": "Michael Schwobe <mschwobe@gmail.com> (http://michaelschwobe.com)",
-  "repository": "michaelschwobe/crate-rackt-app",
-  "bugs": {
-    "url": "https://github.com/michaelschwobe/crate-rackt-app/issues"
-  },
-  "homepage": ".",
-  "keywords": [
-    "airbnb",
-    "babel",
-    "boilerplate",
-    "create-react-app",
-    "es6",
-    "eslint",
-    "front-end",
-    "minimal",
-    "modules",
-    "postcss",
-    "react",
-    "scalable",
-    "skeleton"
-  ],
+  "repository": "github:michaelschwobe/crate-rackt-app",
   "scripts": {
+    "lint": "eslint .",
+    "test": "react-scripts test",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "prezip": "mkdir -p dist; npm run build",
-    "zip": "cd build; zip -r -X '../dist/YYYYMMDD-crate-rackt-app-0.2.0.zip' *; cd ../",
-    "start-stories": "start-storybook -p 9009",
-    "build-stories": "build-storybook",
-    "prezip-stories": "mkdir -p dist; npm run build-stories",
-    "zip-stories": "cd storybook-static; zip -r -X '../dist/YYYYMMDD-crate-rackt-app-stories-0.2.0.zip' *; cd ../",
-    "lint": "eslint '.storybook/**/*.{js,json}' 'src/**/*.{js,json}'",
-    "lint-fix": "eslint '.storybook/**/*.{js,json}' 'src/**/*.{js,json}' --fix",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "classnames": "^2.2.5",
-    "core-js": "^2.5.0",
-    "custom-react-scripts": "^0.2.1",
-    "prop-types": "^15.5.10",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-router-dom": "^4.2.2",
-    "sanitize.css": "^5.0.0"
+    "classnames": "^2.2.6",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.2.6",
-    "@storybook/addon-links": "^3.2.6",
-    "@storybook/react": "^3.2.8",
-    "eslint": "^4.8.0",
-    "eslint-config-airbnb": "^16.0.0",
-    "eslint-config-prettier": "^2.3.0",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-json": "^1.2.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-prettier": "^2.2.0",
-    "eslint-plugin-react": "^7.4.0",
-    "prettier": "^1.5.3"
+    "@babel/core": "^7.5.4",
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-info": "^5.1.9",
+    "@storybook/addon-knobs": "^5.1.9",
+    "@storybook/addon-links": "^5.1.9",
+    "@storybook/addons": "^5.1.9",
+    "@storybook/react": "^5.1.9",
+    "@storybook/theming": "^5.1.9",
+    "eslint": "^4.19.1 || ^5.3.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react-hooks": "^1.6.1",
+    "prettier": "^1.18.2"
+  },
+  "engines": {
+    "node": ">=12.6.0",
+    "yarn": "^1.16.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
