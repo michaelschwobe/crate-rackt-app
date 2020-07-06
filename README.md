@@ -6,10 +6,6 @@ An opinionated template/starting point was bootstrapped with [Create React App](
 
 In the project directory, you can run:
 
-### `yarn test`
-
-Runs the test runner in the interactive watch mode.
-
 ### `yarn clean`
 
 Removes script generated files/folders.
@@ -17,6 +13,10 @@ Removes script generated files/folders.
 ### `yarn lint`
 
 Run the custom linter.
+
+### `yarn test`
+
+Runs the test runner in the interactive watch mode.
 
 ### `yarn start`
 
