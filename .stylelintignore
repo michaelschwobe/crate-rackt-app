@@ -1,0 +1,11 @@
+# node_modules are ignored by default
+
+# Testing
+/coverage
+
+# Development
+/public
+
+# Production
+/build
+/storybook-static

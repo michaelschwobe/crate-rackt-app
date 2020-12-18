@@ -1,0 +1,56 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "jest": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "react-app",
+    "react-app/jest",
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["import", "jsx-a11y", "react", "react-hooks", "prettier"],
+  "rules": {
+    "import/order": [
+      "warn",
+      {
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "newlines-between": "always"
+      }
+    ],
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "assert": "either"
+      }
+    ],
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off"
+  },
+  "overrides": [
+    {
+      "files": ["*.stories.js", "*.test.js"],
+      "rules": {
+        "react/no-children-prop": "off",
+        "react/prop-types": "off"
+      }
+    }
+  ]
+}

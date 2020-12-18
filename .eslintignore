@@ -1,12 +1,13 @@
-# node_modules are ignored by default
+# node_modules are ignored by default, however...
+# @link https://github.com/facebook/create-react-app/issues/8936#issuecomment-674060591
+node_modules
 
 # Testing
 /coverage
 
 # Development
-/src/serviceWorker.js
+/public
 
 # Production
 /build
-/public
 /storybook-static
