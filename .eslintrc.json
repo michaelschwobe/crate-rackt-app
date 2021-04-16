@@ -6,7 +6,6 @@
     "node": true
   },
   "extends": [
-    "plugin:react/recommended",
     "react-app",
     "react-app/jest",
     "airbnb",
@@ -19,7 +18,15 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["import", "jsx-a11y", "react", "react-hooks", "prettier"],
+  "plugins": [
+    "import",
+    "jsx-a11y",
+    "react",
+    "react-hooks",
+    "jest",
+    "testing-library",
+    "prettier"
+  ],
   "rules": {
     "import/order": [
       "warn",
@@ -45,7 +52,18 @@
   },
   "overrides": [
     {
-      "files": ["*.stories.js", "*.test.js"],
+      "files": [
+        "**/*.stories.*"
+      ],
+      "rules": {
+        "import/no-anonymous-default-export": "off"
+      }
+    },
+    {
+      "files": [
+        "**/*.stories.js",
+        "**/*.test.js"
+      ],
       "rules": {
         "react/no-children-prop": "off",
         "react/prop-types": "off"
