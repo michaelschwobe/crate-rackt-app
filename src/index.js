@@ -1,3 +1,4 @@
+import 'stop-runaway-react-effects/hijack';
 import { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 

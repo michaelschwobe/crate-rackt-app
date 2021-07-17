@@ -30,7 +30,11 @@ yarn-debug.log*
 yarn-error.log*
 
 # IDEs
-.vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 *.sublime-*
 
 # Miscellaneous

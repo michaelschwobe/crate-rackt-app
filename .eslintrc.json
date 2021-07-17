@@ -1,16 +1,10 @@
 {
   "env": {
     "browser": true,
-    "es2020": true,
+    "es2021": true,
     "jest": true,
     "node": true
   },
-  "extends": [
-    "react-app",
-    "react-app/jest",
-    "airbnb",
-    "prettier"
-  ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -20,14 +14,38 @@
   },
   "plugins": [
     "import",
+    "security",
+    "sonarjs",
     "jsx-a11y",
-    "react",
-    "react-hooks",
     "jest",
     "testing-library",
+    "react",
+    "react-hooks",
+    "prettier"
+  ],
+  "extends": [
+    "plugin:import/recommended",
+    "plugin:security/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:jest/recommended",
+    "react-app",
+    "react-app/jest",
+    "airbnb",
+    "airbnb/hooks",
     "prettier"
   ],
   "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/setupTests.[jt]s",
+          "**/__tests__/**/*.[jt]s?(x)",
+          "**/?(*.)+(spec|test).[jt]s?(x)"
+        ]
+      }
+    ],
     "import/order": [
       "warn",
       {
@@ -45,24 +63,29 @@
       }
     ],
     "prettier/prettier": "error",
-    "react/jsx-filename-extension": "off",
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
     "react/jsx-props-no-spreading": "off",
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off"
   },
   "overrides": [
     {
-      "files": [
-        "**/*.stories.*"
-      ],
+      "files": ["**/*.stories.*"],
       "rules": {
         "import/no-anonymous-default-export": "off"
       }
     },
     {
       "files": [
-        "**/*.stories.js",
-        "**/*.test.js"
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)"
+      ],
+      "extends": ["plugin:testing-library/react"]
+    },
+    {
+      "files": [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(stories|spec|test).[jt]s?(x)"
       ],
       "rules": {
         "react/no-children-prop": "off",

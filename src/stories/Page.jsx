@@ -43,11 +43,11 @@ const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (
       <p>
         Get a guided tutorial on component-driven development at{' '}
         <a
-          href="https://www.learnstorybook.com"
+          href="https://storybook.js.org/tutorials/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn Storybook
+          Storybook tutorials
         </a>
         . Read more in the{' '}
         <a
