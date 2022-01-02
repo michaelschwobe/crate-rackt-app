@@ -5,8 +5,8 @@ An opinionated template/starting point was bootstrapped with [Create React App](
 ## Requirements
 
 - `macOS` (Windows _might_ work but is not actively tested)
-- `node` version 14 or higher
-- `yarn` version 1.22.10 (or `npm` version 6.14.9) or higher
+- `node` version 16 or higher
+- `yarn` version 1.22.x (or `npm` version 8) or higher
 
 ## Scripts
 
