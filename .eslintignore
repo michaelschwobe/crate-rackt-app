@@ -11,3 +11,6 @@ node_modules
 # Production
 /build
 /storybook-static
+
+# Overrides
+!/.storybook

@@ -9,7 +9,7 @@
   "scripts": {
     "clean": "rimraf .eslintcache .stylelintcache build coverage storybook-static",
     "lint": "npm-run-all --sequential lint:scripts lint:styles",
-    "lint:scripts": "eslint '{.storybook,src}/**/*.{js,jsx,ts,tsx}'",
+    "lint:scripts": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:styles": "stylelint 'src/**/*.css'",
     "lint:fix": "npm-run-all --sequential 'lint:scripts --fix' 'lint:styles --fix'",
     "test": "react-scripts test",

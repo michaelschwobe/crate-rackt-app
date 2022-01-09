@@ -9,3 +9,6 @@
 # Production
 /build
 /storybook-static
+
+# Overrides
+!/.storybook
