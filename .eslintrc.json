@@ -12,24 +12,11 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": [
-    "import",
-    "security",
-    "sonarjs",
-    "jsx-a11y",
-    "jest",
-    "testing-library",
-    "react",
-    "react-hooks",
-    "prettier"
-  ],
+  "plugins": ["security", "sonarjs", "prettier"],
   "extends": [
-    "plugin:import/recommended",
     "plugin:security/recommended",
     "plugin:sonarjs/recommended",
-    "plugin:jsx-a11y/recommended",
     "plugin:storybook/recommended",
-    "plugin:jest/recommended",
     "react-app",
     "react-app/jest",
     "airbnb",
@@ -63,7 +50,7 @@
         "assert": "either"
       }
     ],
-    "prettier/prettier": "error",
+    "prettier/prettier": "warn",
     "react/function-component-definition": [
       "error",
       {
